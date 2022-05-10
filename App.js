@@ -1,20 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import LoginScreen from './app/screens/LoginScreen';
+import RegistrationScreen from './app/screens/RegistrationScreen';
+import WelcomeScreen from './app/screens/WelcomeScreen';
+import Navigator from './routes/homeStack';
+import "react-native-gesture-handler";
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <Navigator />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
