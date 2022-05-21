@@ -79,7 +79,7 @@ const RegistrationScreen = ({navigation}) => {
     setErrors(prevState => ({...prevState, [input]: error}));
   };
   return (
-    <SafeAreaView style={{backgroundColor: COLORS.white, flex: 1}}>
+    <SafeAreaView style={{backgroundColor: COLORS.white, flex: 1}} >
       <Loader visible={loading} />
       <ScrollView
         contentContainerStyle={{paddingTop: 50, paddingHorizontal: 20}}>
