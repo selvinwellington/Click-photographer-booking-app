@@ -1,104 +1,269 @@
-// import { StyleSheet, Text, View, Button } from "react-native";
-// import React from "react";
+// import * as React from "react";
+// import { createDrawerNavigator } from "@react-navigation/drawer";
+// import { NavigationContainer } from "@react-navigation/native";
+// import NotificationsScreen from "./NotificationsScreen";
+// import MapScreen from "./MapScreen";
+// import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+// import Profile from "./Profile";
+// import { StyleSheet, Text, View } from "react-native";
+// import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+// import MyTabs from "./Explore";
 
-// export default function MainScreen({ navigation }) {
+// const Tab = createMaterialBottomTabNavigator();
+// function HomeScreen() {
 //   return (
 //     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-//       <Button
-//         onPress={() => navigation.navigate("NotificationsScreen")}
-//         title="Go to notifications"
-//       />
+//       <Text>Dashboard</Text>
 //     </View>
 //   );
 // }
 
-// const styles = StyleSheet.create({});
+// // function NotificationsScreen() {
+// //   return (
+// //     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+// //       <Text>Notifications Page</Text>
+// //     </View>
+// //   );
+// // }
 
-import * as React from "react";
-import { createDrawerNavigator } from "@react-navigation/drawer";
+// function AboutScreen() {
+//   return (
+//     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+//       <Text>About Page</Text>
+//     </View>
+//   );
+// }
+// const Drawer = createDrawerNavigator();
+
+// export default function MainScreen() {
+//   return (
+//     <>
+//       <NavigationContainer>
+//         <Drawer.Navigator initialRouteName="Home">
+//           <Drawer.Screen name="Home" component={HomeScreen} />
+//           <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+//           <Drawer.Screen name="About" component={AboutScreen} />
+//           <Drawer.Screen name="Search" component={MapScreen} />
+//           <Drawer.Screen name="Profile" component={Profile}/>
+//         </Drawer.Navigator>
+        
+//       </NavigationContainer>
+//       <MyTabs />
+//     </>
+//   );
+// }
+
+import React from "react";
+
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+// import { createStackNavigator } from "@react-navigation/stack";
+
+// import Icon from "react-native-vector-icons/Ionicons";
+
+// import * as React from "react";
+// import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import NotificationsScreen from "./NotificationsScreen";
 import MapScreen from "./MapScreen";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Profile from "./Profile";
+import HomeScreen from "./HomeScreen";
+import AboutScreen from "./AboutScreen";
+import SettingsScreen from "./SettingsScreen";
+import SupportScreen from "./SupportScreen";
+import Explore from "./Explore";
+import SignOut from "./SignOut";
 import { StyleSheet, Text, View } from "react-native";
-import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+
+// import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+// import MyTabs from "./Explore";
+
+// import HomeScreen from "./HomeScreen";
+// import DetailsScreen from "./DetailsScreen";
+// import Drawer from "./Drawer";
+
+// const HomeStack = createStackNavigator();
+// const DetailsStack = createStackNavigator();
 
 const Tab = createMaterialBottomTabNavigator();
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Dashboard</Text>
-    </View>
-  );
-}
 
-// function NotificationsScreen() {
+
+// import * as React from "react";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+// import { NavigationContainer } from "@react-navigation/native";
+// import NotificationsScreen from "./NotificationsScreen";
+// import MapScreen from "./MapScreen";
+// import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+// import Profile from "./Profile";
+// import { StyleSheet, Text, View } from "react-native";
+// import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+// import MyTabs from "./Explore";
+
+// const Tab = createMaterialBottomTabNavigator();
+// function HomeScreen() {
 //   return (
 //     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-//       <Text>Notifications Page</Text>
+//       <Text>Dashboard</Text>
 //     </View>
 //   );
 // }
 
-function AboutScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>About Page</Text>
-    </View>
-  );
-}
+
+// function AboutScreen() {
+//   return (
+//     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+//       <Text>About Page</Text>
+//     </View>
+//   );
+// }
+
+
+
 const Drawer = createDrawerNavigator();
 
-export default function MainScreen() {
+  export default function MainScreen() {
   return (
-    <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
-        <Drawer.Screen name="About" component={AboutScreen} />
-        <Drawer.Screen name="Search" component={MapScreen} />
-      </Drawer.Navigator>
-      {/* <Tab.Navigator
-        initialRouteName="Profile"
-        activeColor="#e91e63"
-        labelStyle={{ fontSize: 12 }}
-        style={{ backgroundColor: "tomato" }}
-      >
-        <Tab.Screen
-          name="Maps"
-          component={MapScreen}
-          options={{
-            tabBarLabel: "Maps",
-            // tabBarIcon: ({ color }) => (
-            // <MaterialCommunityIcons name="home" color={color} size={26} />
-            // ),
-          }}
-        />
-        <Tab.Screen
-          name="Profile"
-          component={Profile}
-          options={{
-            tabBarLabel: "Profile",
-            // tabBarIcon: ({ color }) => (
-            // <MaterialCommunityIcons name="bell" color={color} size={26} />
-            // ),
-          }}
-        />
-        <Tab.Screen
-          name="Notifications"
-          component={NotificationsScreen}
-          options={{
-            tabBarLabel: "Notifications",
-            // tabBarIcon: ({ color }) => (
-            // <MaterialCommunityIcons name="account" color={color} size={26} />
-            // ),
-          }}
-        />
-      </Tab.Navigator> */}
-    </NavigationContainer>
-    // <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-    //   <Text>About Page</Text>
-    // </View>
+    <>
+      <NavigationContainer>
+        <Drawer.Navigator initialRouteName="Home">
+          <Drawer.Screen name="Home" component={MainTabScreen} />
+          <Drawer.Screen name="About" component={AboutScreen} />
+          <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+          <Drawer.Screen name="Support" component={SupportScreen} />
+          <Drawer.Screen name="Settings" component={SettingsScreen} />
+
+          {/* <Drawer.Screen name="Search" component={MapScreen} /> */}
+          <Drawer.Screen name="Profile" component={Profile} />
+          <Drawer.Screen name="SignOut" component={SignOut} />
+        </Drawer.Navigator>
+      </NavigationContainer>
+      {/* <MyTabs /> */}
+    </>
   );
 }
+
+
+
+
+ function MainTabScreen(){
+  return (
+    <Tab.Navigator initialRouteName="HomeScreen" activeColor="#fff">
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          tabBarLabel: "Home",
+          tabBarColor: "#009387",
+          // tabBarIcon: ({ color }) => (
+          //   <MaterialCommunityIcons name="Profile" color={color} size={26} />
+          // ),
+        }}
+      />
+      <Tab.Screen
+        name="MapScreen"
+        component={MapScreen}
+        options={{
+          tabBarLabel: "Search",
+          tabBarColor: "#694fad",
+          // tabBarIcon: ({ color }) => (
+          //   <Icon name="ios-person" color={color} size={26} />
+          // ),
+        }}
+      />
+      <Tab.Screen
+        name="Explore"
+        component={Explore}
+        options={{
+          tabBarLabel: "Explore",
+          tabBarColor: "#1f65ff",
+          // tabBarIcon: ({ color }) => (
+          //   <Icon name="ios-notifications" color={color} size={26} />
+          // ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarLabel: "Profile",
+          tabBarColor: "#009387",
+          // tabBarIcon: ({ color }) => (
+          //   <MaterialCommunityIcons name="Profile" color={color} size={26} />
+          // ),
+        }}
+      />
+
+      {/* <Tab.Screen
+      name="Explore"
+      component={ExploreScreen}
+      options={{
+        tabBarLabel: "Explore",
+        tabBarColor: "#d02860",
+        tabBarIcon: ({ color }) => (
+          <Icon name="ios-aperture" color={color} size={26} />
+        ),
+      }}
+    /> */}
+    </Tab.Navigator>
+  );
+ }
+
+
+// const HomeStackScreen = ({ navigation }) => (
+//   <HomeStack.Navigator
+//     screenOptions={{
+//       headerStyle: {
+//         backgroundColor: "#009387",
+//       },
+//       headerTintColor: "#fff",
+//       headerTitleStyle: {
+//         fontWeight: "bold",
+//       },
+//     }}
+//   >
+//     <HomeStack.Screen
+//       name="Home"
+//       component={HomeScreen}
+//       options={{
+//         title: "Overview",
+//         headerLeft: () => (
+//           <Icon.Button
+//             name="ios-menu"
+//             size={25}
+//             backgroundColor="#009387"
+//             onPress={() => navigation.openDrawer()}
+//           ></Icon.Button>
+//         ),
+//       }}
+//     />
+//   </HomeStack.Navigator>
+// );
+
+// const DetailsStackScreen = ({ navigation }) => (
+//   <DetailsStack.Navigator
+//     screenOptions={{
+//       headerStyle: {
+//         backgroundColor: "#1f65ff",
+//       },
+//       headerTintColor: "#fff",
+//       headerTitleStyle: {
+//         fontWeight: "bold",
+//       },
+//     }}
+//   >
+//     <DetailsStack.Screen
+//       name="Details"
+//       component={DetailsScreen}
+//       options={{
+//         headerLeft: () => (
+//           <Icon.Button
+//             name="ios-menu"
+//             size={25}
+//             backgroundColor="#1f65ff"
+//             onPress={() => navigation.openDrawer()}
+//           ></Icon.Button>
+//         ),
+//       }}
+//     />
+//   </DetailsStack.Navigator>
+// );
