@@ -72,8 +72,12 @@ import SettingsScreen from "./SettingsScreen";
 import SupportScreen from "./SupportScreen";
 import Explore from "./Explore";
 import SignOut from "./SignOut";
+import DetailsScreen from "./DetailsScreen";
 import { StyleSheet, Text, View } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Icon from "react-native-vector-icons/Ionicons";
+
+
 
 // import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 // import MyTabs from "./Explore";
@@ -126,7 +130,17 @@ const Drawer = createDrawerNavigator();
     <>
       <NavigationContainer>
         <Drawer.Navigator initialRouteName="Home">
-          <Drawer.Screen name="Home" component={MainTabScreen} />
+          <Drawer.Screen
+            name="Home"
+            component={MainTabScreen}
+            options={{
+              drawerLabel: "Home",
+              drawerColor: "#009387",
+              drawerIcon: ({ color }) => (
+                <MaterialCommunityIcons name="home" color={color} size={26} />
+              ),
+            }}
+          />
           <Drawer.Screen name="About" component={AboutScreen} />
           <Drawer.Screen name="Notifications" component={NotificationsScreen} />
           <Drawer.Screen name="Support" component={SupportScreen} />
@@ -135,6 +149,7 @@ const Drawer = createDrawerNavigator();
           {/* <Drawer.Screen name="Search" component={MapScreen} /> */}
           <Drawer.Screen name="Profile" component={Profile} />
           <Drawer.Screen name="SignOut" component={SignOut} />
+          <Drawer.Screen name="Details" component={DetailsScreen}/>
         </Drawer.Navigator>
       </NavigationContainer>
       {/* <MyTabs /> */}
@@ -154,9 +169,9 @@ const Drawer = createDrawerNavigator();
         options={{
           tabBarLabel: "Home",
           tabBarColor: "#009387",
-          // tabBarIcon: ({ color }) => (
-          //   <MaterialCommunityIcons name="Profile" color={color} size={26} />
-          // ),
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="home" color={color} size={26} />
+          ),
         }}
       />
       <Tab.Screen
@@ -165,9 +180,9 @@ const Drawer = createDrawerNavigator();
         options={{
           tabBarLabel: "Search",
           tabBarColor: "#694fad",
-          // tabBarIcon: ({ color }) => (
-          //   <Icon name="ios-person" color={color} size={26} />
-          // ),
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="crosshairs" color={color} size={26} />
+          ),
         }}
       />
       <Tab.Screen
@@ -176,9 +191,9 @@ const Drawer = createDrawerNavigator();
         options={{
           tabBarLabel: "Explore",
           tabBarColor: "#1f65ff",
-          // tabBarIcon: ({ color }) => (
-          //   <Icon name="ios-notifications" color={color} size={26} />
-          // ),
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="text-search" color={color} size={26} />
+          ),
         }}
       />
       <Tab.Screen
@@ -187,9 +202,13 @@ const Drawer = createDrawerNavigator();
         options={{
           tabBarLabel: "Profile",
           tabBarColor: "#009387",
-          // tabBarIcon: ({ color }) => (
-          //   <MaterialCommunityIcons name="Profile" color={color} size={26} />
-          // ),
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons
+              name="account-circle"
+              color={color}
+              size={26}
+            />
+          ),
         }}
       />
 

@@ -6,6 +6,9 @@ import RegistrationScreen from "../app/screens/RegistrationScreen";
 import MapScreen from "../app/screens/MapScreen";
 import MainScreen from "../app/screens/MainScreen";
 import NotificationsScreen from "../app/screens/NotificationsScreen";
+import Explore from "../app/screens/Explore";
+import DetailsScreen from "../app/screens/DetailsScreen";
+import sample from "../app/screens/sample";
 
 const screens = {
   WelcomeScreen: {
@@ -35,6 +38,16 @@ const screens = {
   NotificationsScreen: {
     screen: NotificationsScreen,
   },
+
+  // Explore: {
+  //   screen: Explore,
+  // },
+
+  // DetailsScreen:{
+  //   screen: DetailsScreen,
+  // },
+
+ 
 };
 
 const HomeStack = createStackNavigator(screens);
