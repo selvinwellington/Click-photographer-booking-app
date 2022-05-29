@@ -11,7 +11,16 @@ import COLORS from "../conts/colors";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
 const DetailsScreen = ({ navigation, route }) => {
-  const item = route.params;
+  // const item = {
+  //   id: "2",
+  //   name: "FlyHigh Media",
+  //   location: "Guindy,Chennai",
+  //   price: 900,
+  //   image: require("../assets/studio2.webp"),
+  //   details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id leo. Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Justo laoreet sit amet cursus sit`,
+  // };
+  
+  const item=route.params;
 
   return (
     <ScrollView
@@ -26,8 +35,7 @@ const DetailsScreen = ({ navigation, route }) => {
         translucent
         backgroundColor="rgba(0,0,0,0)"
       />
-      <ImageBackground style={style.headerImage}>
-        {/* source={item.image} */}
+      <ImageBackground style={style.headerImage} source={item.image}>
         <View style={style.header}>
           <Icon
             name="arrow-back-ios"
@@ -43,8 +51,9 @@ const DetailsScreen = ({ navigation, route }) => {
           <Icon name="place" color={COLORS.white} size={28} />
         </View>
         <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-          <Text style={{ fontSize: 20, fontWeight: "bold" }}></Text>
-          {/* {item.name} */}
+          <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+            {item.name}
+            </Text>
           <Text
             style={{
               fontSize: 12,
@@ -53,7 +62,7 @@ const DetailsScreen = ({ navigation, route }) => {
               marginTop: 5,
             }}
           >
-            {/* {item.location} */}
+            {item.location}
           </Text>
           <View
             style={{
@@ -78,7 +87,7 @@ const DetailsScreen = ({ navigation, route }) => {
           </View>
           <View style={{ marginTop: 20 }}>
             <Text style={{ lineHeight: 20, color: COLORS.grey }}>
-              {/* {item.details} */}
+              {item.details}
             </Text>
           </View>
         </View>
@@ -103,7 +112,7 @@ const DetailsScreen = ({ navigation, route }) => {
                 marginLeft: 5,
               }}
             >
-              {/* ${item.price} */}
+              ${item.price}
             </Text>
             <Text
               style={{

@@ -6,6 +6,7 @@ import Input from "../components/Input";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Loader from "../components/Loader";
 
+
 const LoginScreen = ({ navigation }) => {
   const [inputs, setInputs] = React.useState({ email: "", password: "" });
   const [errors, setErrors] = React.useState({});

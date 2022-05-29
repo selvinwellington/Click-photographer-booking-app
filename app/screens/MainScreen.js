@@ -65,7 +65,7 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { NavigationContainer } from "@react-navigation/native";
 import NotificationsScreen from "./NotificationsScreen";
 import MapScreen from "./MapScreen";
-import Profile from "./Profile";
+import ProfileScreen from "./ProfileScreen";
 import HomeScreen from "./HomeScreen";
 import AboutScreen from "./AboutScreen";
 import SettingsScreen from "./SettingsScreen";
@@ -73,21 +73,11 @@ import SupportScreen from "./SupportScreen";
 import Explore from "./Explore";
 import SignOut from "./SignOut";
 import DetailsScreen from "./DetailsScreen";
+import EditProfileScreen from "./EditProfileScreen";
 import { StyleSheet, Text, View } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Icon from "react-native-vector-icons/Ionicons";
 
-
-
-// import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-// import MyTabs from "./Explore";
-
-// import HomeScreen from "./HomeScreen";
-// import DetailsScreen from "./DetailsScreen";
-// import Drawer from "./Drawer";
-
-// const HomeStack = createStackNavigator();
-// const DetailsStack = createStackNavigator();
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -147,9 +137,10 @@ const Drawer = createDrawerNavigator();
           <Drawer.Screen name="Settings" component={SettingsScreen} />
 
           {/* <Drawer.Screen name="Search" component={MapScreen} /> */}
-          <Drawer.Screen name="Profile" component={Profile} />
+          <Drawer.Screen name="Profile" component={ProfileScreen} />
           <Drawer.Screen name="SignOut" component={SignOut} />
-          <Drawer.Screen name="Details" component={DetailsScreen}/>
+          <Drawer.Screen name="Details" component={DetailsScreen} />
+          <Drawer.Screen name="EditProfileScreen" component={EditProfileScreen} />
         </Drawer.Navigator>
       </NavigationContainer>
       {/* <MyTabs /> */}
@@ -168,7 +159,8 @@ const Drawer = createDrawerNavigator();
         component={HomeScreen}
         options={{
           tabBarLabel: "Home",
-          tabBarColor: "#009387",
+          tabBarColor: "black",
+          // "#009387"
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="home" color={color} size={26} />
           ),
@@ -180,6 +172,7 @@ const Drawer = createDrawerNavigator();
         options={{
           tabBarLabel: "Search",
           tabBarColor: "#694fad",
+          // "#694fad"
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="crosshairs" color={color} size={26} />
           ),
@@ -192,13 +185,17 @@ const Drawer = createDrawerNavigator();
           tabBarLabel: "Explore",
           tabBarColor: "#1f65ff",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="text-search" color={color} size={26} />
+            <MaterialCommunityIcons
+              name="text-search"
+              color={color}
+              size={26}
+            />
           ),
         }}
       />
       <Tab.Screen
         name="Profile"
-        component={Profile}
+        component={ProfileScreen}
         options={{
           tabBarLabel: "Profile",
           tabBarColor: "#009387",
