@@ -29,11 +29,20 @@ export default function WelcomeScreen({ navigation }) {
             navigation.navigate("LoginScreen");
           }}
         >
-          <Text style={styles.loginText}>LOGIN</Text>
+          <Text style={styles.loginText}>User</Text>
+        </TouchableWithoutFeedback>
+      </View>
+      <View style={styles.registerbutton}>
+        <TouchableWithoutFeedback
+          onPress={() => {
+            navigation.navigate("Phlogin");
+          }}
+        >
+          <Text style={styles.registerText}>Photographer</Text>
         </TouchableWithoutFeedback>
       </View>
 
-      <View style={styles.registerbutton}>
+      {/* <View style={styles.registerbutton}>
         <TouchableWithoutFeedback
           onPress={() => {
             navigation.navigate("RegistrationScreen");
@@ -41,7 +50,7 @@ export default function WelcomeScreen({ navigation }) {
         >
           <Text style={styles.registerText}>Register</Text>
         </TouchableWithoutFeedback>
-      </View>
+      </View> */}
     </ImageBackground>
   );
 }

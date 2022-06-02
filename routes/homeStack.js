@@ -12,17 +12,42 @@ import DetailsScreen from "../app/screens/DetailsScreen";
 import ProfileScreen from "../app/screens/ProfileScreen";
 import EditProfileScreen from "../app/screens/EditProfileScreen";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import Phlogin from "../app/screens/Phlogin";
+import Phdetails from "../app/screens/Phdetails";
 
 const screens = {
   WelcomeScreen: {
     screen: WelcomeScreen,
+    navigationOptions: {
+      // title: "Main ",
+      //   headerStyle: { backgroundColor: "#00ffff" },
+      headerShown: false,
+    },
   },
   LoginScreen: {
     screen: LoginScreen,
+    navigationOptions: {
+      // title: "Main ",
+      //   headerStyle: { backgroundColor: "#00ffff" },
+      headerShown: false,
+    },
+  },
+  Phlogin: {
+    screen: Phlogin,
+    navigationOptions: {
+      // title: "Main ",
+      //   headerStyle: { backgroundColor: "#00ffff" },
+      headerShown: false,
+    },
   },
 
   RegistrationScreen: {
     screen: RegistrationScreen,
+    navigationOptions: {
+      // title: "Main ",
+      //   headerStyle: { backgroundColor: "#00ffff" },
+      headerShown: false,
+    },
   },
 
   MapScreen: {
@@ -76,6 +101,10 @@ const screens = {
 
   EditProfile: {
     screen: EditProfileScreen,
+  },
+
+  Phdetails: {
+    screen:Phdetails,
   }
 };
 

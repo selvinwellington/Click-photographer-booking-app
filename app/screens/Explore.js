@@ -87,6 +87,7 @@ const Explore = ({ navigation }) => {
         onPress={() => {
           console.log(hotel);
           navigation.navigate("DetailsScreen", hotel);
+         
         }}
       >
         <Animated.View style={{ ...style.card, transform: [{ scale }] }}>

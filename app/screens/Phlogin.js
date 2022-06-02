@@ -6,7 +6,6 @@ import Input from "../components/Input";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Loader from "../components/Loader";
 
-
 const LoginScreen = ({ navigation }) => {
   const [inputs, setInputs] = React.useState({ email: "", password: "" });
   const [errors, setErrors] = React.useState({});
@@ -24,7 +23,7 @@ const LoginScreen = ({ navigation }) => {
       isValid = false;
     }
     if (isValid) {
-      navigation.navigate("MainScreen");
+      navigation.navigate("Phdetails");
       // login();
     }
   };
@@ -62,13 +61,27 @@ const LoginScreen = ({ navigation }) => {
     setErrors((prevState) => ({ ...prevState, [input]: error }));
   };
   return (
-    <SafeAreaView style={{ backgroundColor: COLORS.white, flex: 1 }}>
+    <SafeAreaView style={{ backgroundColor: COLORS.orange, flex: 1 }}>
       <Loader visible={loading} />
-      <View style={{ paddingTop: 100, paddingHorizontal: 20 ,}}>
-        <Text style={{ color: COLORS.black, fontSize: 40, fontWeight: "bold",textAlign: "center" }}>
+      <View style={{ paddingTop: 100, paddingHorizontal: 20 }}>
+        <Text
+          style={{
+            color: COLORS.black,
+            fontSize: 40,
+            fontWeight: "bold",
+            textAlign: "center",
+          }}
+        >
           Log In
         </Text>
-        <Text style={{ color: COLORS.grey, fontSize: 18, marginVertical: 10,textAlign: "center" }}>
+        <Text
+          style={{
+            color: COLORS.grey,
+            fontSize: 18,
+            marginVertical: 10,
+            textAlign: "center",
+          }}
+        >
           Enter Your Details to Login
         </Text>
         <View style={{ marginVertical: 20 }}>
