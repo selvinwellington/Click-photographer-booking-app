@@ -8,7 +8,10 @@ const MapScreen = ({ navigation }) => {
   return (
     <SafeAreaView forceInset={{ top: "always" }}>
       <Map />
+      <Text>b</Text>
+
     </SafeAreaView>
+    // </SafeAreaView>
   );
 };
 
