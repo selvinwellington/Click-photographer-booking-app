@@ -129,6 +129,7 @@ const Drawer = createDrawerNavigator();
               drawerIcon: ({ color }) => (
                 <MaterialCommunityIcons name="home" color={color} size={26} />
               ),
+              
             }}
           />
           <Drawer.Screen name="About" component={AboutScreen} />
@@ -140,7 +141,10 @@ const Drawer = createDrawerNavigator();
           <Drawer.Screen name="Profile" component={ProfileScreen} />
           <Drawer.Screen name="SignOut" component={SignOut} />
           <Drawer.Screen name="Details" component={DetailsScreen} />
-          <Drawer.Screen name="EditProfileScreen" component={EditProfileScreen} />
+          <Drawer.Screen
+            name="EditProfileScreen"
+            component={EditProfileScreen}
+          />
         </Drawer.Navigator>
       </NavigationContainer>
       {/* <MyTabs /> */}

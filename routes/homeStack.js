@@ -11,9 +11,12 @@ import Detail from "../app/screens/Detail";
 import DetailsScreen from "../app/screens/DetailsScreen";
 import ProfileScreen from "../app/screens/ProfileScreen";
 import EditProfileScreen from "../app/screens/EditProfileScreen";
+import Explore from "../app/screens/Explore";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Phlogin from "../app/screens/Phlogin";
 import Phdetails from "../app/screens/Phdetails";
+import Phprofile from "../app/screens/Phprofile";
+
 
 const screens = {
   WelcomeScreen: {
@@ -67,15 +70,16 @@ const screens = {
     screen: NotificationsScreen,
   },
 
-  // Explore: {
-  //   screen: Explore,
-  // },
+  Explore: {
+    screen: Explore,
+  },
 
   DetailsScreen: {
     screen: DetailsScreen,
   },
   HomeScreen: {
     screen: HomeScreen,
+   
   },
 
   Detail: {
@@ -104,8 +108,12 @@ const screens = {
   },
 
   Phdetails: {
-    screen:Phdetails,
-  }
+    screen: Phdetails,
+  },
+
+  Phprofile: {
+    screen: Phprofile,
+  },
 };
 
 const HomeStack = createStackNavigator(screens);

@@ -16,14 +16,15 @@ import {
 import Icon from "react-native-vector-icons/MaterialIcons";
 import COLORS from "../conts/colors";
 import hotels from "../conts/hotels";
-import DetailsScreen from "./DetailsScreen";
+// import DetailsScreen from "./DetailsScreen";
 
 // const Stack = createStackNavigator();
+
 
 const { width } = Dimensions.get("screen");
 const cardWidth = width / 1.8;
 
-const Explore = ({ navigation }) => {
+const Explore = ({navigation}) => {
   const categories = ["All", "Popular", "Top Rated", "Featured", "Luxury"];
   const [selectedCategoryIndex, setSelectedCategoryIndex] = React.useState(0);
   const [activeCardIndex, setActiveCardIndex] = React.useState(0);
@@ -87,8 +88,8 @@ const Explore = ({ navigation }) => {
         onPress={() => {
           console.log(hotel);
           navigation.navigate("DetailsScreen", hotel);
-         
         }}
+        
       >
         <Animated.View style={{ ...style.card, transform: [{ scale }] }}>
           <Animated.View style={{ ...style.cardOverLay, opacity }} />
