@@ -140,7 +140,8 @@ const styles = StyleSheet.create({
     flex: 1,
     // justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F5FCFF",
+    // backgroundColor: "#F5FCFF",
+    backgroundColor: "#fdf5e6",
   },
   checkboxWrapper: {
     flexDirection: "row",
@@ -149,15 +150,16 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   heading: {
-    fontSize: 25,
+    fontSize: 28,
     fontWeight: "bold",
     color: "orange",
     margin: 30,
   },
   text: {
-    color: "blue",
-    fontSize: 17,
+    color: "black",
+    fontSize: 20,
     paddingLeft: 10,
+    fontWeight: "bold",
   },
   button: {
     margin: 20,

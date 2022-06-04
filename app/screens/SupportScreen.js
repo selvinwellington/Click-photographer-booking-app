@@ -9,7 +9,7 @@ const HelpPage = () => {
 
   return (
     // <React.StrictMode>
-    <ScrollView style={{ backgroundColor: "#000080" }}>
+    <ScrollView>
       <SafeAreaView style={styles.container}>
         <Text style={styles.mainheader}>FAQ</Text>
         <View>
@@ -54,10 +54,10 @@ const HelpPage = () => {
         >
           <Text style={styles.mainheader}>Was this helpful?</Text>
           <TouchableOpacity style={styles.commandButton}>
-            <Text style={styles.panelButtonTitle}>Yes</Text>
+            <Text style={{ color: "white" }}>Yes</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.commandButton}>
-            <Text style={styles.panelButtonTitle}>No</Text>
+            <Text style={{ color: "white" }}>No</Text>
           </TouchableOpacity>
         </View>
       </SafeAreaView>
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 20,
     fontWeight: "bold",
-    color: "white",
+    color: "black",
   },
   Listcontainer: {
     justifyContent: "space-between",
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   commandButton: {
     padding: 15,
     borderRadius: 25,
-    backgroundColor: "white",
+    backgroundColor: "orange",
     alignItems: "center",
     margin: 10,
     color: "#000080",
