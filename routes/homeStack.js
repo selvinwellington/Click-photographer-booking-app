@@ -16,21 +16,32 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Phlogin from "../app/screens/Phlogin";
 import Phdetails from "../app/screens/Phdetails";
 import Phprofile from "../app/screens/Phprofile";
+import ExploreStack from "./ExploreStack";
+import BookingStack from "./BookingStack";
+
 
 
 const screens = {
-  WelcomeScreen: {
-    screen: WelcomeScreen,
+  // WelcomeScreen: {
+  //   screen: WelcomeScreen,
+  //   navigationOptions: {
+  //     // title: "Main ",
+  //     //   headerStyle: { backgroundColor: "#00ffff" },
+  //     headerShown: false,
+  //   },
+  // },
+  // LoginScreen: {
+  //   screen: LoginScreen,
+  //   navigationOptions: {
+  //     // title: "Main ",
+  //     //   headerStyle: { backgroundColor: "#00ffff" },
+  //     headerShown: false,
+  //   },
+  // },
+  MainScreen: {
+    screen: MainScreen,
     navigationOptions: {
-      // title: "Main ",
-      //   headerStyle: { backgroundColor: "#00ffff" },
-      headerShown: false,
-    },
-  },
-  LoginScreen: {
-    screen: LoginScreen,
-    navigationOptions: {
-      // title: "Main ",
+      title: "Main ",
       //   headerStyle: { backgroundColor: "#00ffff" },
       headerShown: false,
     },
@@ -57,29 +68,23 @@ const screens = {
     screen: MapScreen,
   },
 
-  MainScreen: {
-    screen: MainScreen,
-    navigationOptions: {
-      title: "Main ",
-      //   headerStyle: { backgroundColor: "#00ffff" },
-      headerShown: false,
-    },
-  },
-
   NotificationsScreen: {
     screen: NotificationsScreen,
   },
 
-  Explore: {
-    screen: Explore,
-  },
+  // Explore: {
+  //   screen: Explore,
+  // },
 
-  DetailsScreen: {
-    screen: DetailsScreen,
+  // DetailsScreen: {
+  //   screen: DetailsScreen,
+  // },
+
+  Explorer: {
+    screen: ExploreStack,
   },
   HomeScreen: {
     screen: HomeScreen,
-   
   },
 
   Detail: {
@@ -113,6 +118,10 @@ const screens = {
 
   Phprofile: {
     screen: Phprofile,
+  },
+
+  BookingPage:{
+    screen: BookingStack,
   },
 };
 

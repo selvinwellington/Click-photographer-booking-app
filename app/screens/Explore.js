@@ -67,7 +67,7 @@ const Explore = ({navigation}) => {
       </View>
     );
   };
-  const Card = ({ hotel, index }) => {
+  const Card = ({ hotel, index,navigation }) => {
     const inputRange = [
       (index - 1) * cardWidth,
       index * cardWidth,
@@ -87,7 +87,7 @@ const Explore = ({navigation}) => {
         activeOpacity={1}
         onPress={() => {
           console.log(hotel);
-          navigation.navigate("DetailsScreen", hotel);
+          navigation.navigate("DetailsScreen",hotel);
         }}
         
       >
@@ -217,7 +217,7 @@ const Explore = ({navigation}) => {
             }}
             showsHorizontalScrollIndicator={false}
             renderItem={({ item, index }) => (
-              <Card hotel={item} index={index} />
+              <Card hotel={item} index={index} navigation={navigation} />
             )}
             snapToInterval={cardWidth}
           />

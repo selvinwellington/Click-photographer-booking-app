@@ -105,7 +105,7 @@ const ProfileScreen = ({ navigation }) => {
       <TouchableRipple
         style={styles.commandButton}
         onPress={() => navigation.navigate("EditProfileScreen")}
-        // onPress={() => {}}
+        
       >
         <Text style={styles.panelButtonTitle}>Edit Profile</Text>
       </TouchableRipple>

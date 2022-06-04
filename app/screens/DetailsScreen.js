@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Text,
   View,
+  TouchableOpacity
 } from "react-native";
 import COLORS from "../conts/colors";
 import Icon from "react-native-vector-icons/MaterialIcons";
@@ -102,7 +103,7 @@ const DetailsScreen = ({ navigation,route }) => {
           }}
         >
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-            Price per night
+            Price 
           </Text>
           <View style={style.priceTag}>
             <Text
@@ -127,13 +128,13 @@ const DetailsScreen = ({ navigation,route }) => {
             </Text>
           </View>
         </View>
-        <View style={style.btn}>
+        <TouchableOpacity style={style.btn}>
           <Text
             style={{ color: COLORS.white, fontSize: 18, fontWeight: "bold" }}
           >
             Book Now
           </Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
