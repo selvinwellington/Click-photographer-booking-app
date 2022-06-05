@@ -10,7 +10,7 @@ const initialState = {
   TraditionalVideo: false,
   PhotoAlbum: false,
 };
-export default function Checkbox() {
+export default function Checkbox({navigation}) {
   const [state, setState] = React.useState(initialState);
   const [toggleButton, setToggleButton] = React.useState(false);
   return (
@@ -106,7 +106,8 @@ export default function Checkbox() {
         </View>
         <View style={styles.button}>
           <Button
-            onPress={() => setToggleButton((toggleButton) => !toggleButton)}
+            // onPress={() => setToggleButton((toggleButton) => !toggleButton)}
+            onPress={() => navigation.navigate("BookingPage4")}
             title="Continue"
           />
         </View>
