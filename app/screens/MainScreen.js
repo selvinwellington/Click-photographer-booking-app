@@ -77,6 +77,7 @@ import EditProfileScreen from "./EditProfileScreen";
 import { StyleSheet, Text, View } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Icon from "react-native-vector-icons/Ionicons";
+import ExploreStack from "../../routes/ExploreStack";
 
 
 const Tab = createMaterialBottomTabNavigator();
@@ -84,6 +85,8 @@ const Tab = createMaterialBottomTabNavigator();
 
 // import * as React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import Detail from "./Detail";
+import BookingStack from "../../routes/BookingStack";
 // import { NavigationContainer } from "@react-navigation/native";
 // import NotificationsScreen from "./NotificationsScreen";
 // import MapScreen from "./MapScreen";
@@ -122,7 +125,7 @@ const Drawer = createDrawerNavigator();
         <Drawer.Navigator initialRouteName="Home">
           <Drawer.Screen
             name="Home"
-            component={MainTabScreen}
+            component={HomeScreen}
             options={{
               drawerLabel: "Home",
               drawerColor: "#009387",
@@ -135,12 +138,18 @@ const Drawer = createDrawerNavigator();
           <Drawer.Screen name="Notifications" component={NotificationsScreen} />
           <Drawer.Screen name="Support" component={SupportScreen} />
           <Drawer.Screen name="Settings" component={SettingsScreen} />
+          <Drawer.Screen name="Detail" component={Detail} />
+          <Drawer.Screen name="Explorer" component={ExploreStack} />
 
           {/* <Drawer.Screen name="Search" component={MapScreen} /> */}
           <Drawer.Screen name="Profile" component={ProfileScreen} />
           <Drawer.Screen name="SignOut" component={SignOut} />
-          <Drawer.Screen name="Details" component={DetailsScreen} />
-          <Drawer.Screen name="EditProfileScreen" component={EditProfileScreen} />
+          <Drawer.Screen name="BookingPage" component={BookingStack} />
+
+          <Drawer.Screen
+            name="EditProfileScreen"
+            component={EditProfileScreen}
+          />
         </Drawer.Navigator>
       </NavigationContainer>
       {/* <MyTabs /> */}
@@ -151,78 +160,82 @@ const Drawer = createDrawerNavigator();
 
 
 
- function MainTabScreen(){
-  return (
-    <Tab.Navigator initialRouteName="HomeScreen" activeColor="#fff">
-      <Tab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          tabBarLabel: "Home",
-          tabBarColor: "black",
-          // "#009387"
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" color={color} size={26} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="MapScreen"
-        component={MapScreen}
-        options={{
-          tabBarLabel: "Search",
-          tabBarColor: "#694fad",
-          // "#694fad"
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="crosshairs" color={color} size={26} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Explore"
-        component={Explore}
-        options={{
-          tabBarLabel: "Explore",
-          tabBarColor: "#1f65ff",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons
-              name="text-search"
-              color={color}
-              size={26}
-            />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Profile"
-        component={ProfileScreen}
-        options={{
-          tabBarLabel: "Profile",
-          tabBarColor: "#009387",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons
-              name="account-circle"
-              color={color}
-              size={26}
-            />
-          ),
-        }}
-      />
+//  function MainTabScreen(){
+//   return (
+//     <Tab.Navigator initialRouteName="HomeScreen" activeColor="#fff">
+//       <Tab.Screen
+//         name="Home"
+//         component={HomeScreen}
+//         options={{
+//           tabBarLabel: "Home",
+//           tabBarColor: "black",
+//           // "#009387"
+//           tabBarIcon: ({ color }) => (
+//             <MaterialCommunityIcons name="home" color={color} size={26} />
+//           ),
+//         }}
+//       />
+//       <Tab.Screen
+//         name="MapScreen"
+//         component={MapScreen}
+//         options={{
+//           tabBarLabel: "Search",
+//           tabBarColor: "#694fad",
+//           // "#694fad"
+//           tabBarIcon: ({ color }) => (
+//             <MaterialCommunityIcons name="crosshairs" color={color} size={26} />
+//           ),
+//         }}
+//       />
+//       <Tab.Screen
+//         name="Explore"
+//         component={Explore}
+//         options={{
+//           tabBarLabel: "Explore",
+//           tabBarColor: "#1f65ff",
+//           tabBarIcon: ({ color }) => (
+//             <MaterialCommunityIcons
+//               name="text-search"
+//               color={color}
+//               size={26}
+//             />
+//           ),
+//         }}
+//       />
+//       <Tab.Screen
+//         name="Profile"
+//         component={ProfileScreen}
+//         options={{
+//           tabBarLabel: "Profile",
+//           tabBarColor: "#009387",
+//           tabBarIcon: ({ color }) => (
+//             <MaterialCommunityIcons
+//               name="account-circle"
+//               color={color}
+//               size={26}
+//             />
+//           ),
+//         }}
+//       />
 
-      {/* <Tab.Screen
-      name="Explore"
-      component={ExploreScreen}
-      options={{
-        tabBarLabel: "Explore",
-        tabBarColor: "#d02860",
-        tabBarIcon: ({ color }) => (
-          <Icon name="ios-aperture" color={color} size={26} />
-        ),
-      }}
-    /> */}
-    </Tab.Navigator>
-  );
- }
+//       {/* <Tab.Screen
+//       name="Explore"
+//       component={ExploreScreen}
+//       options={{
+//         tabBarLabel: "Explore",
+//         tabBarColor: "#d02860",
+//         tabBarIcon: ({ color }) => (
+//           <Icon name="ios-aperture" color={color} size={26} />
+//         ),
+//       }}
+//     /> */}
+//     </Tab.Navigator>
+//   );
+//  }
+
+
+// ......................................
+
 
 
 // const HomeStackScreen = ({ navigation }) => (

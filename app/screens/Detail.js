@@ -26,7 +26,8 @@ import {
   IL_User_01,
 } from "../src/res/images1";
 
-const Detail = ({ navigation }) => {
+const Detail = ({ navigation, route }) => {
+  const { img, name } = route.params;
   return (
     <View style={{ flex: 1, backgroundColor: colors.white }}>
       <ScrollView>
@@ -37,7 +38,7 @@ const Detail = ({ navigation }) => {
         /> */}
         {/* image */}
         <Image
-          source={IL_House_01}
+          source={img}
           style={{
             height: 300,
             width: "100%",
@@ -66,10 +67,13 @@ const Detail = ({ navigation }) => {
             }}
           >
             <View>
-              <Text style={{ fontSize: 18, 
-                // fontFamily: fonts.SemiBold 
-                }}>
-                Modern House
+              <Text
+                style={{
+                  fontSize: 18,
+                  // fontFamily: fonts.SemiBold
+                }}
+              >
+                {name}
               </Text>
               <Text
                 style={{
@@ -91,9 +95,12 @@ const Detail = ({ navigation }) => {
           </View>
           {/* section agent */}
           <View style={{ paddingHorizontal: 20 }}>
-            <Text style={{ fontSize: 14,
-              //  fontFamily: fonts.SemiBold 
-               }}>
+            <Text
+              style={{
+                fontSize: 14,
+                //  fontFamily: fonts.SemiBold
+              }}
+            >
               Listing Agent
             </Text>
             <View
@@ -123,13 +130,9 @@ const Detail = ({ navigation }) => {
                 </Text>
               </View>
               <View style={{ flexDirection: "row" }}>
-                <TouchableOpacity>
-                  {/* <IC_Chat /> */}
-                </TouchableOpacity>
+                <TouchableOpacity>{/* <IC_Chat /> */}</TouchableOpacity>
                 <Gap width={10} />
-                <TouchableOpacity>
-                  {/* <IC_Call /> */}
-                </TouchableOpacity>
+                <TouchableOpacity>{/* <IC_Call /> */}</TouchableOpacity>
               </View>
             </View>
           </View>
@@ -165,13 +168,26 @@ const Detail = ({ navigation }) => {
                 image={IL_Garage}
                 name="Garage"
               />
+              <ListItem
+                type="facilities-item"
+                image={IL_Garage}
+                name="Garage"
+              />
+              <ListItem
+                type="facilities-item"
+                image={IL_Garage}
+                name="Garage"
+              />
             </ScrollView>
           </View>
           {/* description */}
           <View style={{ padding: 20 }}>
-            <Text style={{ fontSize: 14, 
-              // fontFamily: fonts.SemiBold 
-              }}>
+            <Text
+              style={{
+                fontSize: 14,
+                // fontFamily: fonts.SemiBold
+              }}
+            >
               Description
             </Text>
             <Text
@@ -182,12 +198,50 @@ const Detail = ({ navigation }) => {
               }}
             >
               Luxury homes at affordable prices with Bandung's hilly atmosphere.
-              Located in a strategic location, flood free.
+              Located in a strategic location, flood free. Luxury homes at
+              affordable prices with Bandung's hilly atmosphere. Located in a
+              strategic location, flood free. Luxury homes at affordable prices
+              with Bandung's hilly atmosphere. Located in a strategic location,
+              flood free. Luxury homes at affordable prices with Bandung's hilly
+              atmosphere. Located in a strategic location, flood free.
             </Text>
+          </View>
+
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+              padding: 20,
+            }}
+          >
+            <View>
+              <Text
+                style={{
+                  fontSize: 12,
+                  // fontFamily: fonts.SemiBold,
+                  color: colors.grey,
+                }}
+              >
+                Price
+              </Text>
+              <Text
+                style={{
+                  fontFamily: fonts.Bold,
+                  fontSize: 20,
+                  color: "#4d79ff",
+                }}
+              >
+                $7,500
+              </Text>
+            </View>
+            {/* button */}
+            <Button text="Book Now" />
           </View>
         </View>
       </ScrollView>
       {/* book */}
+
       <View
         style={{
           height: 100,
@@ -212,7 +266,7 @@ const Detail = ({ navigation }) => {
                 color: colors.grey,
               }}
             >
-              Price
+              {/* Price */}
             </Text>
             <Text
               style={{
@@ -221,11 +275,11 @@ const Detail = ({ navigation }) => {
                 color: "#4d79ff",
               }}
             >
-              $7,500
+              {/* $7,500 */}
             </Text>
           </View>
           {/* button */}
-          <Button text="Book Now" />
+          {/* <Button text="Book Now" /> */}
         </View>
       </View>
     </View>

@@ -23,8 +23,7 @@ import {
 } from "../src/res/images1";
 
 // export default HomeScreen = () => {
-const HomeScreen = ({ navigation }) =>{
-
+const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -62,25 +61,48 @@ const HomeScreen = ({ navigation }) =>{
               name="Wedding Photography"
               city="Full Day"
               image={IL_House_01}
-              onPress={() => navigation.navigate("Detail")}
+              onPress={() =>
+                navigation.navigate("Detail", {
+                  img: IL_House_01,
+                  name: "Wedding Photography",
+                })
+              }
             />
             <ListItem
               type="main"
               name="Birthday"
               city="Full Day"
               image={IL_House_02}
+              onPress={() =>
+                navigation.navigate("Detail", {
+                  img: IL_House_02,
+                  name: "Birthday Photography",
+                })
+              }
             />
             <ListItem
               type="main"
               name="Event"
               city="Full Day"
               image={IL_House_03}
+              onPress={() =>
+                navigation.navigate("Detail", {
+                  img: IL_House_03,
+                  name: "Event Photography",
+                })
+              }
             />
             <ListItem
               type="main"
               name="Aerial Photography"
               city=""
               image={IL_House_04}
+              onPress={() =>
+                navigation.navigate("Detail", {
+                  img: IL_House_04,
+                  name: "Aerial Photography",
+                })
+              }
             />
           </ScrollView>
           {/* recommend section */}
@@ -102,7 +124,6 @@ const HomeScreen = ({ navigation }) =>{
     </SafeAreaView>
   );
 };
-
 
 export default HomeScreen;
 
@@ -160,7 +181,6 @@ const styles = StyleSheet.create({
   fontFamily: fonts.SemiBold,
 });
 
-
 // import { StyleSheet, Text, View } from 'react-native'
 // import React from 'react'
 
@@ -168,7 +188,7 @@ const styles = StyleSheet.create({
 //   return (
 //     <View>
 //       <Text>HomeScreen</Text>
-      
+
 //     </View>
 //   )
 // }

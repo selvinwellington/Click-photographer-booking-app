@@ -16,14 +16,15 @@ import {
 import Icon from "react-native-vector-icons/MaterialIcons";
 import COLORS from "../conts/colors";
 import hotels from "../conts/hotels";
-import DetailsScreen from "./DetailsScreen";
+// import DetailsScreen from "./DetailsScreen";
 
 // const Stack = createStackNavigator();
+
 
 const { width } = Dimensions.get("screen");
 const cardWidth = width / 1.8;
 
-const Explore = ({ navigation }) => {
+const Explore = ({navigation}) => {
   const categories = ["All", "Popular", "Top Rated", "Featured", "Luxury"];
   const [selectedCategoryIndex, setSelectedCategoryIndex] = React.useState(0);
   const [activeCardIndex, setActiveCardIndex] = React.useState(0);
@@ -66,7 +67,7 @@ const Explore = ({ navigation }) => {
       </View>
     );
   };
-  const Card = ({ hotel, index }) => {
+  const Card = ({ hotel, index,navigation }) => {
     const inputRange = [
       (index - 1) * cardWidth,
       index * cardWidth,
@@ -86,9 +87,9 @@ const Explore = ({ navigation }) => {
         activeOpacity={1}
         onPress={() => {
           console.log(hotel);
-          navigation.navigate("DetailsScreen", hotel);
-         
+          navigation.navigate("DetailsScreen",hotel);
         }}
+        
       >
         <Animated.View style={{ ...style.card, transform: [{ scale }] }}>
           <Animated.View style={{ ...style.cardOverLay, opacity }} />
@@ -216,7 +217,7 @@ const Explore = ({ navigation }) => {
             }}
             showsHorizontalScrollIndicator={false}
             renderItem={({ item, index }) => (
-              <Card hotel={item} index={index} />
+              <Card hotel={item} index={index} navigation={navigation} />
             )}
             snapToInterval={cardWidth}
           />
