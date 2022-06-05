@@ -15,15 +15,16 @@ import Gap from "../src/components/atoms/Gap";
 import colors from "../src/res/colors";
 import fonts from "../src/res/fonts";
 import {
-  IC_Call,
-  IC_Chat,
-  IC_Star,
-  IC_Star_Half,
   IL_BedRoom,
   IL_Garage,
-  IL_House_01,
+  IL_User_02,
   IL_Pool,
   IL_User_01,
+  studio1,
+  studio2,
+  studio3,
+  studio4,
+  studio5,
 } from "../src/res/images1";
 
 const Detail = ({ navigation, route }) => {
@@ -62,15 +63,16 @@ const Detail = ({ navigation, route }) => {
           <View
             style={{
               flexDirection: "row",
-              padding: 20,
+              padding: 30,
               justifyContent: "space-between",
             }}
           >
             <View>
               <Text
                 style={{
-                  fontSize: 18,
+                  fontSize: 24,
                   // fontFamily: fonts.SemiBold
+                  // fontWeight: "bold",
                 }}
               >
                 {name}
@@ -80,9 +82,10 @@ const Detail = ({ navigation, route }) => {
                   fontSize: 14,
                   fontFamily: fonts.Regular,
                   color: colors.grey,
+                  marginTop: 10,
                 }}
               >
-                KBP Bandung, Indonesia
+                For 1 day of photo + video
               </Text>
             </View>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -98,10 +101,11 @@ const Detail = ({ navigation, route }) => {
             <Text
               style={{
                 fontSize: 14,
+                marginBottom: 10,
                 //  fontFamily: fonts.SemiBold
               }}
             >
-              Listing Agent
+              Top Photographers
             </Text>
             <View
               style={{
@@ -117,7 +121,7 @@ const Detail = ({ navigation, route }) => {
               />
               <View style={{ flex: 1, paddingLeft: 15 }}>
                 <Text style={{ fontSize: 14, fontFamily: fonts.Medium }}>
-                  Samarinda Kita
+                  Andrew
                 </Text>
                 <Text
                   style={{
@@ -126,16 +130,53 @@ const Detail = ({ navigation, route }) => {
                     color: colors.grey,
                   }}
                 >
-                  House Owner
+                  Sony Digital
                 </Text>
               </View>
+
               <View style={{ flexDirection: "row" }}>
-                <TouchableOpacity>{/* <IC_Chat /> */}</TouchableOpacity>
+                {/* <TouchableOpacity>
+                  {IC_Chat}
+                  <Text>Contact us</Text>
+                </TouchableOpacity>
                 <Gap width={10} />
-                <TouchableOpacity>{/* <IC_Call /> */}</TouchableOpacity>
+                <TouchableOpacity>
+                  {IC_Call}
+                  <Text>Contact us</Text>
+                </TouchableOpacity> */}
               </View>
             </View>
           </View>
+
+          <View
+            style={{
+              flexDirection: "row",
+              paddingVertical: 10,
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginLeft: 20,
+            }}
+          >
+            <Image
+              source={IL_User_02}
+              style={{ height: 50, width: 50, borderRadius: 50 / 2 }}
+            />
+            <View style={{ flex: 1, paddingLeft: 15 }}>
+              <Text style={{ fontSize: 14, fontFamily: fonts.Medium }}>
+                Manoj AK
+              </Text>
+              <Text
+                style={{
+                  fontSize: 10,
+                  fontFamily: fonts.Regular,
+                  color: colors.grey,
+                }}
+              >
+                Focuz Studios
+              </Text>
+            </View>
+          </View>
+
           {/* house facilities */}
           <View style={{ marginTop: 20 }}>
             <Text
@@ -143,9 +184,10 @@ const Detail = ({ navigation, route }) => {
                 // fontFamily: fonts.SemiBold,
                 fontSize: 14,
                 paddingLeft: 20,
+                fontWeight: "bold",
               }}
             >
-              House Facilities
+              Top Studios
             </Text>
             {/* house facilities item */}
             <ScrollView
@@ -153,31 +195,41 @@ const Detail = ({ navigation, route }) => {
               showsHorizontalScrollIndicator={false}
               style={{ paddingVertical: 10, paddingLeft: 20 }}
             >
-              <ListItem
-                type="facilities-item"
-                image={IL_Pool}
-                name="Swimming Pool"
-              />
-              <ListItem
-                type="facilities-item"
-                image={IL_BedRoom}
-                name="4 Bedroom"
-              />
-              <ListItem
-                type="facilities-item"
-                image={IL_Garage}
-                name="Garage"
-              />
-              <ListItem
-                type="facilities-item"
-                image={IL_Garage}
-                name="Garage"
-              />
-              <ListItem
-                type="facilities-item"
-                image={IL_Garage}
-                name="Garage"
-              />
+              <TouchableOpacity onPress={() => navigation.navigate("Explore")}>
+                <ListItem
+                  type="facilities-item"
+                  image={studio5}
+                  name="Sony Digital"
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <ListItem
+                  type="facilities-item"
+                  image={studio4}
+                  name="Light Studio"
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <ListItem
+                  type="facilities-item"
+                  image={studio2}
+                  name="FlyHigh Media"
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <ListItem
+                  type="facilities-item"
+                  image={studio3}
+                  name="Photon Talkies"
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <ListItem
+                  type="facilities-item"
+                  image={studio1}
+                  name="Studio F3"
+                />
+              </TouchableOpacity>
             </ScrollView>
           </View>
           {/* description */}
@@ -195,27 +247,36 @@ const Detail = ({ navigation, route }) => {
                 fontFamily: fonts.Regular,
                 color: colors.grey,
                 fontSize: 12,
+                textAlign: "justify",
               }}
             >
-              Luxury homes at affordable prices with Bandung's hilly atmosphere.
-              Located in a strategic location, flood free. Luxury homes at
-              affordable prices with Bandung's hilly atmosphere. Located in a
-              strategic location, flood free. Luxury homes at affordable prices
-              with Bandung's hilly atmosphere. Located in a strategic location,
-              flood free. Luxury homes at affordable prices with Bandung's hilly
-              atmosphere. Located in a strategic location, flood free.
+              Photographers record events and tells stories using images. They
+              take pictures of people, places, events, and objects.
+              Photographers often specialize in a type of photography. Portrait
+              photographers take pictures of people in studios or on-site at
+              various locations. Commercial photographers take pictures that are
+              used in books, advertisements, and catalogs. Photojournalists,
+              also known as news photographers, capture images that are usually
+              used to illustrate stories on television news broadcasts or in
+              newspapers or magazines. Aerial photographers take pictures of
+              landscapes and structures from aircraft, while fine arts
+              photographers sell their photographs to the public as pieces of
+              art. About 147,300 people worked in this occupation in 2016. More
+              than half of all photographers are self-employed as freelancers.
+              Others work for companies that provide photographic services,
+              broadcast companies, and publishers.
             </Text>
           </View>
 
           <View
             style={{
               flexDirection: "row",
-              justifyContent: "space-between",
+              justifyContent: "space-around",
               alignItems: "center",
               padding: 20,
             }}
           >
-            <View>
+            {/* <View>
               <Text
                 style={{
                   fontSize: 12,
@@ -234,9 +295,12 @@ const Detail = ({ navigation, route }) => {
               >
                 $7,500
               </Text>
-            </View>
+            </View> */}
             {/* button */}
-            <Button text="Book Now" />
+            <Button
+              style={{ flex: 1, justifyContent: "spacearound" }}
+              text="Book Now"
+            />
           </View>
         </View>
       </ScrollView>

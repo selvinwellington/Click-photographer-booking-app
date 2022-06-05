@@ -97,7 +97,14 @@ const DetailsScreen = ({ navigation, route }) => {
             <Text style={{ fontSize: 13, color: COLORS.grey }}>365reviews</Text>
           </View>
           <View style={{ marginTop: 20 }}>
-            <Text style={{ lineHeight: 20, color: COLORS.grey }}>
+            
+            <Text
+              style={{
+                lineHeight: 20,
+                color: COLORS.grey,
+                textAlign: "justify",
+              }}
+            >
               {item.details}
             </Text>
           </View>
