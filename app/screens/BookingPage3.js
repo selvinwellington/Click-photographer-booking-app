@@ -10,7 +10,7 @@ const initialState = {
   TraditionalVideo: false,
   PhotoAlbum: false,
 };
-export default function Checkbox({navigation}) {
+export default function Checkbox({ navigation }) {
   const [state, setState] = React.useState(initialState);
   const [toggleButton, setToggleButton] = React.useState(false);
   return (

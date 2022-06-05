@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 10,
     // backgroundColor: "#FF6347",
-    backgroundColor: "gray",
+    backgroundColor: "#696969",
     alignItems: "center",
     marginTop: 10,
     marginLeft: 70,
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   panelButtonTitle: {
     fontSize: 17,
     fontWeight: "bold",
-    color: "black",
+    color: "white",
   },
   heading: {
     textAlign: "center",
