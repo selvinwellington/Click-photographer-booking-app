@@ -2,42 +2,43 @@ const questions = [
   {
     id: 1,
     question:
-      "What Should I do if my Order is approved but hasn't been shipped yet? ",
+      "how to book a service ?  ",
     Answer:
-      "Sellers Usually ship the order before the delivery date.In case your order hasn't been shipped whitin this time please contact our Customer Support so that we Can look into it ",
+      "  Search for the category you need",
+      
   },
   {
     id: 2,
-    question: "Can I ask the delivery agent to reshedule my order ",
-    Answer: "Yes.You can schedule the pickup date based on your convenience",
+    question: "how to cancel a booking? ",
+    Answer: "Search for the booking you want to cancel and click on cancel.",
   },
   {
     id: 3,
-    question: "How do I know my order has been confirmed?",
+    question: " How to know if my request is confirmed?",
     Answer:
-      " An e-mail & SMS will be sent once you've successfully placed your order. We'll also let you know as soon as the seller ships the item(s) to you along with the tracking number(s) for your shipment(s). You can track your orders from the 'My Orders' section on your Vegges account.",
+      "Once you place a booking, you will recieive a confirmation via SMS or email or Whatsapp informing you that the booking has been accepted.A verified photographer will be assigned for your booking 1hour before the time",
   },
   {
     id: 4,
     question:
-      "Do I need to verify my mobile number or email        address every time I log in?",
+      "How can i contact the professional ?",
 
     Answer:
-      " As the verification step is a one time process, you won't have to do it again once your account is verified",
+      "Contact details of the photographer are shared with you in the project, select the photographer you want to speak to ans call the photographer ",
   },
   {
     id: 5,
     question:
-      "If I have found a security Bug/Vulnerability/Issue      what should I do?",
+      "Refund policy ",
     Answer:
-      "We take security very seriously at vegges. If you have found an issue on vegges, you can report it to security@vegges.com with the below details:1. Steps to reproduce the bug/issue 2. Your web browser/mobile browser's name and version3. Screenshot/screencast (if any).",
+      "On cancellation of a request, the refound will be automatically initiated into your original payment method within 5-7 business days. for example, if you paid for a service via credit card,the amount will be credit back into your credit card.",
   },
   {
     id: 6,
     question:
-      "If I have found a security Bug/Vulnerability/Issue      what should I do?",
+      "How can i rate and review the service if a photographer ?",
     Answer:
-      "We take security very seriously at vegges. If you have found an issue on vegges, you can report it to security@vegges.com with the below details:1. Steps to reproduce the bug/issue 2. Your web browser/mobile browser's name and version3. Screenshot/screencast (if any).",
+      "After each boooking is completed, you will be asked to rate the photographer. ypu would also be allowed to leave a feedback for the service and suggest improvements on various parameters. you can also edit your rating or review anytime in the next 30 days",
   },
 ];
 export default questions;
