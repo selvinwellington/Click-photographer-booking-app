@@ -6,12 +6,24 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 import COLORS from "../conts/colors";
 import Icon from "react-native-vector-icons/MaterialIcons";
+import ListItem from "../src/components/molecules/ListItem";
+import {
+  wedding,
+  birthday,
+  products,
+  foreign,
+  products2,
+  birthday2,
+  birthday3,
+  candid,
+  candid2,
+} from "../studiopics/studioimg";
 
-const DetailsScreen = ({ navigation,route }) => {
+const DetailsScreen = ({ navigation, route }) => {
   // const item = {
   //   id: "2",
   //   name: "FlyHigh Media",
@@ -20,9 +32,8 @@ const DetailsScreen = ({ navigation,route }) => {
   //   image: require("../assets/studio2.webp"),
   //   details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id leo. Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Justo laoreet sit amet cursus sit`,
   // };
-  
-  const item=route.params;
-  
+
+  const item = route.params;
 
   return (
     <ScrollView
@@ -53,9 +64,7 @@ const DetailsScreen = ({ navigation,route }) => {
           <Icon name="place" color={COLORS.white} size={28} />
         </View>
         <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-          <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-            {item.name}
-            </Text>
+          <Text style={{ fontSize: 20, fontWeight: "bold" }}>{item.name}</Text>
           <Text
             style={{
               fontSize: 12,
@@ -88,7 +97,14 @@ const DetailsScreen = ({ navigation,route }) => {
             <Text style={{ fontSize: 13, color: COLORS.grey }}>365reviews</Text>
           </View>
           <View style={{ marginTop: 20 }}>
-            <Text style={{ lineHeight: 20, color: COLORS.grey }}>
+            
+            <Text
+              style={{
+                lineHeight: 20,
+                color: COLORS.grey,
+                textAlign: "justify",
+              }}
+            >
               {item.details}
             </Text>
           </View>
@@ -102,9 +118,7 @@ const DetailsScreen = ({ navigation,route }) => {
             alignItems: "center",
           }}
         >
-          <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-            Price 
-          </Text>
+          <Text style={{ fontSize: 20, fontWeight: "bold" }}>Price</Text>
           <View style={style.priceTag}>
             <Text
               style={{
@@ -114,7 +128,7 @@ const DetailsScreen = ({ navigation,route }) => {
                 marginLeft: 5,
               }}
             >
-              ${item.price}
+              ₹{item.price}
             </Text>
             <Text
               style={{
@@ -124,10 +138,48 @@ const DetailsScreen = ({ navigation,route }) => {
                 marginLeft: 5,
               }}
             >
-              +breakfast
+              - For 1 day of photo + video
             </Text>
           </View>
         </View>
+
+        <View style={{ marginTop: 20 }}>
+          <Text
+            style={{
+              // fontFamily: fonts.SemiBold,
+              fontSize: 14,
+              paddingLeft: 20,
+              fontWeight: "bold",
+            }}
+          >
+            Photo Albums
+          </Text>
+          {/* house facilities item */}
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            style={{ paddingVertical: 10, paddingLeft: 20 }}
+          >
+            <ListItem type="facilities-item" image={birthday} name="Birthday" />
+            <ListItem type="facilities-item" image={wedding} name="wedding" />
+
+            <ListItem type="facilities-item" image={candid} name="Candid" />
+
+            {/* <ListItem
+              type="facilities-item"
+              image={birthday3}
+              name="Birthday"
+            /> */}
+            {/* <ListItem type="facilities-item" image={birthday} name="Birthday" />
+            <ListItem type="facilities-item" image={birthday} name="Birthday" /> */}
+
+            <ListItem type="facilities-item" image={products} name="Product" />
+            <ListItem type="facilities-item" image={foreign} name="wedding" />
+            <ListItem type="facilities-item" image={products2} name="Product" />
+            <ListItem type="facilities-item" image={candid2} name="Candid" />
+          </ScrollView>
+        </View>
+
         <TouchableOpacity style={style.btn}>
           <Text
             style={{ color: COLORS.white, fontSize: 18, fontWeight: "bold" }}

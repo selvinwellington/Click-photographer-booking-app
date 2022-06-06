@@ -20,6 +20,10 @@ import {
   IL_House_03,
   IL_House_04,
   IL_House_05,
+  fashionph,
+  portrait,
+  sportsph,
+  travel,
 } from "../src/res/images1";
 
 // export default HomeScreen = () => {
@@ -112,12 +116,58 @@ const HomeScreen = ({ navigation }) => {
             <ListItem
               name="Travel Photography"
               city="Full Day"
-              image={IL_House_03}
+              image={travel}
+              onPress={() =>
+                navigation.navigate("Detail", {
+                  img: travel,
+                  name: "Travel Photography",
+                })
+              }
             />
-            <ListItem name="Fashion" city="" image={IL_House_04} />
-            <ListItem name="Festivals" city="" image={IL_House_05} />
-            <ListItem name="Portrait Photography" city="" image={IL_House_05} />
-            <ListItem name="Sports Photography" city="" image={IL_House_05} />
+            <ListItem
+              name="Fashion"
+              city=""
+              image={fashionph}
+              onPress={() =>
+                navigation.navigate("Detail", {
+                  img: fashionph,
+                  name: "Fashion Photography",
+                })
+              }
+            />
+            <ListItem
+              name="Festivals"
+              city=""
+              image={IL_House_05}
+              onPress={() =>
+                navigation.navigate("Detail", {
+                  img: IL_House_05,
+                  name: "Festival Photography",
+                })
+              }
+            />
+            <ListItem
+              name="Portrait Photography"
+              city=""
+              image={portrait}
+              onPress={() =>
+                navigation.navigate("Detail", {
+                  img: portrait,
+                  name: "Portrait Photography",
+                })
+              }
+            />
+            <ListItem
+              name="Sports Photography"
+              city=""
+              image={sportsph}
+              onPress={() =>
+                navigation.navigate("Detail", {
+                  img: sportsph,
+                  name: "Sports Photography",
+                })
+              }
+            />
           </View>
         </View>
       </ScrollView>

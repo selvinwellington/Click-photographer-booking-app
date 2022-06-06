@@ -87,9 +87,8 @@ const Explore = ({navigation}) => {
         activeOpacity={1}
         onPress={() => {
           console.log(hotel);
-          navigation.navigate("DetailsScreen",hotel);
+          navigation.navigate("DetailsScreen", hotel);
         }}
-        
       >
         <Animated.View style={{ ...style.card, transform: [{ scale }] }}>
           <Animated.View style={{ ...style.cardOverLay, opacity }} />
@@ -97,7 +96,7 @@ const Explore = ({navigation}) => {
             <Text
               style={{ color: COLORS.white, fontSize: 20, fontWeight: "bold" }}
             >
-              ${hotel.price}
+              ₹{hotel.price}
             </Text>
           </View>
           <Image source={hotel.image} style={style.cardImage} />
