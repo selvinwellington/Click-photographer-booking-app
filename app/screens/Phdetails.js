@@ -78,7 +78,7 @@ const actions = [
     position: 2,
   },
   {
-    text: "Language",
+    text: "Album",
     icon: require("../assets/maploc.png"),
     style: { backgroundColor: COLORS.orange },
     name: "bt_language",

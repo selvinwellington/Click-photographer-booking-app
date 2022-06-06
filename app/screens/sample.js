@@ -183,6 +183,7 @@ const styles = StyleSheet.create({
   tabTitle: {
     lineHeight: 19,
     fontWeight: "500",
+    marginRight:25,
     // color: "white",
   },
   divider: {
