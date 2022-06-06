@@ -90,19 +90,19 @@ export default class sample extends React.Component {
           <Button
             shadowless
             style={[styles.tab, styles.divider]}
-            // onPress={() => navigation.navigate("Pro")}
+            // onPress={() => navigation.navigate("ExploreStack")}
           >
             <Block row middle>
               {/* <Icon name="grid" family="feather" style={{ paddingRight: 8 }} /> */}
               <Text size={16} style={styles.tabTitle}>
-                Categories
+                Explore
               </Text>
             </Block>
           </Button>
           <Button
             shadowless
             style={styles.tab}
-            // onPress={() => navigation.navigate("Pro")}
+            // onPress={() => navigation.navigate("PhotoStack")}
           >
             <Block row middle>
               {/* <Icon
@@ -112,7 +112,7 @@ export default class sample extends React.Component {
               style={{ paddingRight: 8 }}
             /> */}
               <Text size={16} style={styles.tabTitle}>
-                Explore
+                Categories
               </Text>
             </Block>
           </Button>

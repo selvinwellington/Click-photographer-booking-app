@@ -19,6 +19,7 @@ import Phprofile from "../app/screens/Phprofile";
 import ExploreStack from "./ExploreStack";
 import BookingStack from "./BookingStack";
 import PhotoStack from "./PhotoStack";
+// import sample from "../app/screens/sample";
 
 
 
@@ -77,8 +78,8 @@ const screens = {
   //   screen: Explore,
   // },
 
-  // DetailsScreen: {
-  //   screen: DetailsScreen,
+  // sample: {
+  //   screen: sample,
   // },
 
   Explorer: {

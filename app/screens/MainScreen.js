@@ -125,7 +125,7 @@ const Drawer = createDrawerNavigator();
       <NavigationContainer>
         <Drawer.Navigator initialRouteName="Home">
           <Drawer.Screen
-            name="sample"
+            name="Home"
             // component={HomeScreen}
             component={MainTabScreen}
             options={{

@@ -51,7 +51,7 @@ class Product extends React.Component {
               {product.title}
             </Text>
             <Text size={12} muted={!priceColor} color={priceColor}>
-              ${product.price}
+              {product.price}
             </Text>
           </Block>
         </TouchableWithoutFeedback>
