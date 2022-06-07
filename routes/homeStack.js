@@ -26,22 +26,22 @@ import BookingForm from "../app/screens/BookingForm";
 
 
 const screens = {
-  // WelcomeScreen: {
-  //   screen: WelcomeScreen,
-  //   navigationOptions: {
-  //     // title: "Main ",
-  //     //   headerStyle: { backgroundColor: "#00ffff" },
-  //     headerShown: false,
-  //   },
-  // },
-  // LoginScreen: {
-  //   screen: LoginScreen,
-  //   navigationOptions: {
-  //     // title: "Main ",
-  //     //   headerStyle: { backgroundColor: "#00ffff" },
-  //     headerShown: false,
-  //   },
-  // },
+  WelcomeScreen: {
+    screen: WelcomeScreen,
+    navigationOptions: {
+      // title: "Main ",
+      //   headerStyle: { backgroundColor: "#00ffff" },
+      headerShown: false,
+    },
+  },
+  LoginScreen: {
+    screen: LoginScreen,
+    navigationOptions: {
+      // title: "Main ",
+      //   headerStyle: { backgroundColor: "#00ffff" },
+      headerShown: false,
+    },
+  },
   MainScreen: {
     screen: MainScreen,
     navigationOptions: {

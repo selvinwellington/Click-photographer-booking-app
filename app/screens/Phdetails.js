@@ -28,6 +28,11 @@ export default function Phdetails({ navigation }) {
           <FloatingAction
             // style={{ position: "absolute", bottom: 10, right: 10 }}
             actions={actions}
+            color="black"
+            animated={true}
+            iconWidth={20}
+            iconHeight={20}
+            buttonSize={50}
             onPressItem={(name) => {
               console.log(`selected button: ${name}`);
               navigation.navigate(name);
@@ -74,14 +79,16 @@ const actions = [
   {
     text: "EditProfile",
     icon: require("../assets/maploc.png"),
-    name: "EditProfile",
+    name: "EditProfileScreen",
     position: 2,
+    animated: true,
   },
   {
     text: "Album",
     icon: require("../assets/maploc.png"),
-    style: { backgroundColor: COLORS.orange },
+    // style: { backgroundColor: COLORS.orange },
     name: "bt_language",
+    animated: true,
     position: 1,
   },
   {
@@ -89,13 +96,15 @@ const actions = [
     icon: require("../assets/maploc.png"),
 
     name: "bt_room",
+    animated: true,
     position: 3,
   },
   {
     text: "Profile",
-    icon: require("../assets/maploc.png"),
+    icon: require("../assets/phprofile.png"),
 
     name: "Phprofile",
+    animated: true,
     position: 4,
   },
 ];

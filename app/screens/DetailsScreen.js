@@ -77,6 +77,16 @@ const DetailsScreen = ({ navigation, route }) => {
           >
             {item.location}
           </Text>
+          <Text
+            style={{
+              fontSize: 12,
+              fontWeight: "400",
+              color: COLORS.grey,
+              marginTop: 5,
+            }}
+          >
+            +91-9360495121
+          </Text>
           <View
             style={{
               marginTop: 10,
@@ -89,7 +99,6 @@ const DetailsScreen = ({ navigation, route }) => {
                 {item.rating} {""}
               </Text>
               <StarRating ratings={item.rating} reviews={item.reviews} />
-
             </View>
             <Text style={{ fontSize: 13, color: COLORS.grey }}>365reviews</Text>
           </View>
