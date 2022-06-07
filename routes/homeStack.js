@@ -19,27 +19,29 @@ import Phprofile from "../app/screens/Phprofile";
 import ExploreStack from "./ExploreStack";
 import BookingStack from "./BookingStack";
 import PhotoStack from "./PhotoStack";
+import BookingForm from "../app/screens/BookingForm";
+
 // import sample from "../app/screens/sample";
 
 
 
 const screens = {
-  WelcomeScreen: {
-    screen: WelcomeScreen,
-    navigationOptions: {
-      // title: "Main ",
-      //   headerStyle: { backgroundColor: "#00ffff" },
-      headerShown: false,
-    },
-  },
-  LoginScreen: {
-    screen: LoginScreen,
-    navigationOptions: {
-      // title: "Main ",
-      //   headerStyle: { backgroundColor: "#00ffff" },
-      headerShown: false,
-    },
-  },
+  // WelcomeScreen: {
+  //   screen: WelcomeScreen,
+  //   navigationOptions: {
+  //     // title: "Main ",
+  //     //   headerStyle: { backgroundColor: "#00ffff" },
+  //     headerShown: false,
+  //   },
+  // },
+  // LoginScreen: {
+  //   screen: LoginScreen,
+  //   navigationOptions: {
+  //     // title: "Main ",
+  //     //   headerStyle: { backgroundColor: "#00ffff" },
+  //     headerShown: false,
+  //   },
+  // },
   MainScreen: {
     screen: MainScreen,
     navigationOptions: {
@@ -97,26 +99,26 @@ const screens = {
   //   screen: Detail,
   // },
 
-  ProfileScreen: {
-    screen: ProfileScreen,
-    // navigationOptions: {
-    //   headerRight: () => (
-    //     <View style={{ marginRight: 10 }}>
-    //       <MaterialCommunityIcons.Button
-    //         name="account-circle"
-    //         size={25}
-    //         backgroundColor={colors.background}
-    //         color={colors.text}
-    //         onPress={() => navigation.navigate("EditProfileScreen")}
-    //       />
-    //     </View>
-    //   ),
-    // },
-  },
+  // ProfileScreen: {
+  //   screen: ProfileScreen,
+  //   // navigationOptions: {
+  //   //   headerRight: () => (
+  //   //     <View style={{ marginRight: 10 }}>
+  //   //       <MaterialCommunityIcons.Button
+  //   //         name="account-circle"
+  //   //         size={25}
+  //   //         backgroundColor={colors.background}
+  //   //         color={colors.text}
+  //   //         onPress={() => navigation.navigate("EditProfileScreen")}
+  //   //       />
+  //   //     </View>
+  //   //   ),
+  //   // },
+  // },
 
-  EditProfile: {
-    screen: EditProfileScreen,
-  },
+  // EditProfile: {
+  //   screen: EditProfileScreen,
+  // },
 
   Phdetails: {
     screen: Phdetails,
@@ -128,6 +130,9 @@ const screens = {
 
   BookingPage:{
     screen: BookingStack,
+  },
+  BookingForm:{
+    screen:BookingForm,
   },
 };
 

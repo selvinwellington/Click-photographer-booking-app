@@ -88,6 +88,8 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import Detail from "./Detail";
 import BookingStack from "../../routes/BookingStack";
 import PhotoStack from "../../routes/PhotoStack";
+import BookingForm from "./BookingForm";
+
 // import { NavigationContainer } from "@react-navigation/native";
 // import NotificationsScreen from "./NotificationsScreen";
 // import MapScreen from "./MapScreen";
@@ -137,7 +139,21 @@ const Drawer = createDrawerNavigator();
             }}
           />
           <Drawer.Screen name="About" component={AboutScreen} />
-          <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+          <Drawer.Screen
+            name="Notifications"
+            component={NotificationsScreen}
+            options={{
+              drawerLabel: "Notifications",
+              drawerColor: "#009387",
+              drawerIcon: ({ color }) => (
+                <MaterialCommunityIcons
+                  name="notification-clear-all"
+                  color={color}
+                  size={26}
+                />
+              ),
+            }}
+          />
           <Drawer.Screen name="Support" component={SupportScreen} />
           <Drawer.Screen name="Settings" component={SettingsScreen} />
           <Drawer.Screen name="Category" component={PhotoStack} />
@@ -147,11 +163,13 @@ const Drawer = createDrawerNavigator();
           <Drawer.Screen name="Profile" component={ProfileScreen} />
           <Drawer.Screen name="SignOut" component={SignOut} />
           <Drawer.Screen name="BookingPage" component={BookingStack} />
+          <Drawer.Screen name="Booking" component={BookingForm} />
 
           <Drawer.Screen
             name="EditProfileScreen"
             component={EditProfileScreen}
           />
+          <Drawer.Screen name="DetailsScreen" component={DetailsScreen} />
         </Drawer.Navigator>
       </NavigationContainer>
       {/* <MyTabs /> */}

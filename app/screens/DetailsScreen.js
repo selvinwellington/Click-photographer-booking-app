@@ -11,6 +11,7 @@ import {
 import COLORS from "../conts/colors";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import ListItem from "../src/components/molecules/ListItem";
+import StarRating from "../components/StarRating";
 import {
   wedding,
   birthday,
@@ -34,6 +35,7 @@ const DetailsScreen = ({ navigation, route }) => {
   // };
 
   const item = route.params;
+  console.log(item);
 
   return (
     <ScrollView
@@ -83,21 +85,15 @@ const DetailsScreen = ({ navigation, route }) => {
             }}
           >
             <View style={{ flexDirection: "row" }}>
-              <View style={{ flexDirection: "row" }}>
-                <Icon name="star" size={20} color={COLORS.orange} />
-                <Icon name="star" size={20} color={COLORS.orange} />
-                <Icon name="star" size={20} color={COLORS.orange} />
-                <Icon name="star" size={20} color={COLORS.orange} />
-                <Icon name="star" size={20} color={COLORS.grey} />
-              </View>
               <Text style={{ fontWeight: "bold", fontSize: 18, marginLeft: 5 }}>
-                4.0
+                {item.rating} {""}
               </Text>
+              <StarRating ratings={item.rating} reviews={item.reviews} />
+
             </View>
             <Text style={{ fontSize: 13, color: COLORS.grey }}>365reviews</Text>
           </View>
           <View style={{ marginTop: 20 }}>
-            
             <Text
               style={{
                 lineHeight: 20,
@@ -180,7 +176,12 @@ const DetailsScreen = ({ navigation, route }) => {
           </ScrollView>
         </View>
 
-        <TouchableOpacity style={style.btn}>
+        <TouchableOpacity
+          style={style.btn}
+          onPress={() => {
+            navigation.navigate("Booking", item);
+          }}
+        >
           <Text
             style={{ color: COLORS.white, fontSize: 18, fontWeight: "bold" }}
           >
