@@ -25,16 +25,25 @@ export default function WelcomeScreen({ navigation }) {
       ) : (
         <ImageBackground
           style={styles.background}
-          source={require("../assets/background.jpg")}
+          source={require("../assets/backgroundimg.webp")}
         >
           <View style={styles.logoContainer}>
-            <Image
+            {/* <Image
               style={styles.logo}
               source={require("../assets/Black.png")}
-            ></Image>
+            ></Image> */}
 
             <Text style={styles.welcomeText}>
-              Capture every moment in life with one CLICK
+              Capture every moment in life with one {" "}
+              <Text
+                style={{
+                  fontSize: 30,
+                  fontWeight: "bold",
+                  color: "white",
+                }}
+              >
+                CLICK
+              </Text>
             </Text>
           </View>
           <View style={styles.loginbutton}>
@@ -105,7 +114,7 @@ const styles = StyleSheet.create({
 
   logoContainer: {
     position: "absolute",
-    top: 70,
+    top: 50,
     width: "100%",
     alignItems: "center",
     fontSize: 15,
@@ -131,8 +140,8 @@ const styles = StyleSheet.create({
     margin: 20,
     fontSize: 30,
     fontFamily: "Roboto",
-    fontWeight: "bold",
-    color: "white",
+    fontWeight: "700",
+    color: "black",
     width: 300,
   },
 });
