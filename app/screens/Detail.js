@@ -297,10 +297,29 @@ const Detail = ({ navigation, route }) => {
               </Text>
             </View> */}
             {/* button */}
-            <Button
+
+            {/* <Button
               style={{ flex: 1, justifyContent: "spacearound" }}
               text="Book Now"
-            />
+              onPress={() =>{ navigation.navigate("Booking")}}
+            /> */}
+
+            {/* <TouchableOpacity
+              style={style.btn}
+              onPress={() => {
+                navigation.navigate("Booking");
+              }}
+            >
+              <Text
+                style={{
+                  color: "white",
+                  fontSize: 18,
+                  fontWeight: "bold",
+                }}
+              >
+                Book Now
+              </Text>
+            </TouchableOpacity> */}
           </View>
         </View>
       </ScrollView>
@@ -352,4 +371,6 @@ const Detail = ({ navigation, route }) => {
 
 export default Detail;
 
-const styles = StyleSheet.create({});
+const style = StyleSheet.create({
+
+});

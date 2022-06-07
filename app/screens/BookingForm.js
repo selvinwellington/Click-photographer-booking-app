@@ -43,7 +43,6 @@ const BookingForm = ({ navigation, route }) => {
       handleError("Please input a valid email", "email");
       isValid = false;
       setVisible(false);
-
     }
 
     if (!inputs.fullname) {
@@ -56,8 +55,7 @@ const BookingForm = ({ navigation, route }) => {
       handleError("Please input phone number", "phone");
       setVisible(false);
       isValid = false;
-    }
-    else if (inputs.phone.length < 10) {
+    } else if (inputs.phone.length < 10) {
       handleError("Enter 10-digit phone number", "phone");
       isValid = false;
     }
@@ -81,13 +79,12 @@ const BookingForm = ({ navigation, route }) => {
     if (isValid) {
       setVisible(true);
       // register();
-  
-              setTimeout(() => {
-                setVisible(false);
-                navigation.navigate("Home");
-              }, 3000);
+
+      setTimeout(() => {
+        setVisible(false);
+        navigation.navigate("Home");
+      }, 3000);
     }
-  
   };
 
   const ModalPoup = ({ visible, children }) => {

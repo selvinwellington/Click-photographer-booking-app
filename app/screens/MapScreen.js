@@ -53,7 +53,7 @@ const MapScreen = ({ navigation }) => {
     markers,
     // categories: [
     //   {
-    //     name: "Fastfood Center",
+    //     name: "Photographer",
     //     icon: (
     //       <MaterialCommunityIcons
     //         style={styles.chipsIcon}
@@ -63,7 +63,7 @@ const MapScreen = ({ navigation }) => {
     //     ),
     //   },
     //   {
-    //     name: "Restaurant",
+    //     name: "Studio",
     //     icon: (
     //       <Ionicons name="ios-restaurant" style={styles.chipsIcon} size={18} />
     //     ),

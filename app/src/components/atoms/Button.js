@@ -3,7 +3,8 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import colors from "../../../src/res/colors";
 // import fonts from "../../src/res/fonts";
 
-const Button = ({ text }) => {
+
+const Button = ({ text,navigation }) => {
   return (
     <TouchableOpacity
       style={{
@@ -12,6 +13,7 @@ const Button = ({ text }) => {
         paddingVertical: 15,
         borderRadius: 30,
       }}
+     
     >
       <Text
         style={{

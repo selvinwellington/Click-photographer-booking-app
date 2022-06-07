@@ -7,25 +7,25 @@ export default function BookingPage5({ navigation }) {
       <Text style={styles.heading}>When do you need these services?</Text>
       <TouchableOpacity
         style={styles.commandButton}
-        onPress={() => navigation.navigate("BookingPage3")}
+        onPress={() => navigation.navigate("ExploreStack")}
       >
         <Text style={styles.panelButtonTitle}>Within this month</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.commandButton}
-        onPress={() => navigation.navigate("BookingPage3")}
+        onPress={() => navigation.navigate("ExploreStack")}
       >
         <Text style={styles.panelButtonTitle}>In next 2-3 months</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.commandButton}
-        onPress={() => navigation.navigate("BookingPage3")}
+        onPress={() => navigation.navigate("ExploreStack")}
       >
         <Text style={styles.panelButtonTitle}>In next 3-6 months</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.commandButton}
-        onPress={() => navigation.navigate("BookingPage3")}
+        onPress={() => navigation.navigate("ExploreStack")}
       >
         <Text style={styles.panelButtonTitle}> After around 6 months</Text>
       </TouchableOpacity>

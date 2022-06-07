@@ -8,41 +8,55 @@ export default function WelcomeScreen({ navigation }) {
   //     // console.log("clicked");
   //     navigation.navigate("LoginScreen");
   //   };
+  const [loaded, setLoaded] = React.useState(true);
+  setTimeout(() => {
+    setLoaded(false);
+  }, 2500);
+
   return (
-    <ImageBackground
-      style={styles.background}
-      source={require("../assets/background.jpg")}
-    >
-      <View style={styles.logoContainer}>
-        <Image
-          style={styles.logo}
-          source={require("../assets/logo.png")}
-        ></Image>
-
-        <Text style={styles.welcomeText}>
-          Capture every moment in life with one CLICK
-        </Text>
-      </View>
-      <View style={styles.loginbutton}>
-        <TouchableWithoutFeedback
-          onPress={() => {
-            navigation.navigate("LoginScreen");
-          }}
+    <>
+      {loaded ? (
+        <View style={styles.full}>
+          <Image
+            style={styles.pop}
+            source={require("../assets/pop-up.gif")}
+          ></Image>
+        </View>
+      ) : (
+        <ImageBackground
+          style={styles.background}
+          source={require("../assets/background.jpg")}
         >
-          <Text style={styles.loginText}>User</Text>
-        </TouchableWithoutFeedback>
-      </View>
-      <View style={styles.registerbutton}>
-        <TouchableWithoutFeedback
-          onPress={() => {
-            navigation.navigate("Phlogin");
-          }}
-        >
-          <Text style={styles.registerText}>Photographer</Text>
-        </TouchableWithoutFeedback>
-      </View>
+          <View style={styles.logoContainer}>
+            <Image
+              style={styles.logo}
+              source={require("../assets/Black.png")}
+            ></Image>
 
-      {/* <View style={styles.registerbutton}>
+            <Text style={styles.welcomeText}>
+              Capture every moment in life with one CLICK
+            </Text>
+          </View>
+          <View style={styles.loginbutton}>
+            <TouchableWithoutFeedback
+              onPress={() => {
+                navigation.navigate("LoginScreen");
+              }}
+            >
+              <Text style={styles.loginText}>User</Text>
+            </TouchableWithoutFeedback>
+          </View>
+          <View style={styles.registerbutton}>
+            <TouchableWithoutFeedback
+              onPress={() => {
+                navigation.navigate("Phlogin");
+              }}
+            >
+              <Text style={styles.registerText}>Photographer</Text>
+            </TouchableWithoutFeedback>
+          </View>
+
+          {/* <View style={styles.registerbutton}>
         <TouchableWithoutFeedback
           onPress={() => {
             navigation.navigate("RegistrationScreen");
@@ -51,7 +65,9 @@ export default function WelcomeScreen({ navigation }) {
           <Text style={styles.registerText}>Register</Text>
         </TouchableWithoutFeedback>
       </View> */}
-    </ImageBackground>
+        </ImageBackground>
+      )}
+    </>
   );
 }
 
@@ -95,11 +111,28 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   logo: {
-    width: 200,
-    height: 100,
+    width: 300,
+    height: 150,
+  },
+  pop: {
+    width: 400,
+    height: 400,
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    resizeMode: "contain",
+  },
+  full: {
+    height: "100%",
+    width: "100%",
+    backgroundColor: "white",
   },
   welcomeText: {
-    margin: 30,
-    fontSize: 35,
+    margin: 20,
+    fontSize: 30,
+    fontFamily: "Roboto",
+    fontWeight: "bold",
+    color: "white",
+    width: 300,
   },
 });

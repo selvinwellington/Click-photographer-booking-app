@@ -104,8 +104,7 @@ const ProfileScreen = ({ navigation }) => {
       </View> */}
       <TouchableRipple
         style={styles.commandButton}
-        onPress={() => navigation.navigate("EditProfileScreen")}
-        
+        onPress={() => navigation.navigate("   ")}
       >
         <Text style={styles.panelButtonTitle}>Edit Profile</Text>
       </TouchableRipple>
@@ -137,14 +136,14 @@ const ProfileScreen = ({ navigation }) => {
         </TouchableRipple>
         <TouchableRipple onPress={() => {}}>
           <View style={styles.menuItem}>
-            <Icon name="account-check-outline" color="#FF6347" size={25} />
-            <Text style={styles.menuItemText}>Support</Text>
+            <Icon name="brightness-7" color="#FF6347" size={25} />
+            <Text style={styles.menuItemText}>Settings</Text>
           </View>
         </TouchableRipple>
         <TouchableRipple onPress={() => {}}>
           <View style={styles.menuItem}>
-            <Icon name="settings-outline" color="#FF6347" size={25} />
-            <Text style={styles.menuItemText}>Settings</Text>
+            <Icon name="account-check-outline" color="#FF6347" size={25} />
+            <Text style={styles.menuItemText}>Support</Text>
           </View>
         </TouchableRipple>
       </View>

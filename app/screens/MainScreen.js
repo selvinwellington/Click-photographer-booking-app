@@ -138,8 +138,22 @@ const Drawer = createDrawerNavigator();
               ),
             }}
           />
-          <Drawer.Screen name="About" component={AboutScreen} />
           <Drawer.Screen
+            name="About"
+            component={AboutScreen}
+            options={{
+              drawerLabel: "About",
+              drawerColor: "#009387",
+              drawerIcon: ({ color }) => (
+                <MaterialCommunityIcons
+                  name="gesture-tap-hold"
+                  color={color}
+                  size={26}
+                />
+              ),
+            }}
+          />
+          {/* <Drawer.Screen
             name="Notifications"
             component={NotificationsScreen}
             options={{
@@ -153,23 +167,93 @@ const Drawer = createDrawerNavigator();
                 />
               ),
             }}
+          /> */}
+          <Drawer.Screen
+            name="Explorer"
+            component={ExploreStack}
+            options={{
+              drawerLabel: "Explore",
+              drawerColor: "#009387",
+              drawerIcon: ({ color }) => (
+                <MaterialCommunityIcons
+                  name="toy-brick-search"
+                  color={color}
+                  size={26}
+                />
+              ),
+            }}
           />
-          <Drawer.Screen name="Support" component={SupportScreen} />
-          <Drawer.Screen name="Settings" component={SettingsScreen} />
-          <Drawer.Screen name="Category" component={PhotoStack} />
-          <Drawer.Screen name="Explorer" component={ExploreStack} />
-
-          <Drawer.Screen name="Detail" component={Detail} />
-          <Drawer.Screen name="Profile" component={ProfileScreen} />
-          <Drawer.Screen name="SignOut" component={SignOut} />
-          <Drawer.Screen name="BookingPage" component={BookingStack} />
-          <Drawer.Screen name="Booking" component={BookingForm} />
+          <Drawer.Screen
+            name="Category"
+            component={PhotoStack}
+            options={{
+              drawerLabel: "Category",
+              drawerColor: "#009387",
+              drawerIcon: ({ color }) => (
+                <MaterialCommunityIcons
+                  name="calendar-multiple"
+                  color={color}
+                  size={26}
+                />
+              ),
+            }}
+          />
 
           <Drawer.Screen
-            name="EditProfileScreen"
-            component={EditProfileScreen}
+            name="Filter"
+            component={BookingStack}
+            options={{
+              drawerLabel: "Filter",
+              drawerColor: "#009387",
+              drawerIcon: ({ color }) => (
+                <MaterialCommunityIcons
+                  name="filter-plus"
+                  color={color}
+                  size={26}
+                />
+              ),
+            }}
           />
-          <Drawer.Screen name="DetailsScreen" component={DetailsScreen} />
+
+          <Drawer.Screen
+            name="Support"
+            component={SupportScreen}
+            options={{
+              drawerLabel: "Support",
+              drawerColor: "#009387",
+              drawerIcon: ({ color }) => (
+                <MaterialCommunityIcons
+                  name="account-alert"
+                  color={color}
+                  size={26}
+                />
+              ),
+            }}
+          />
+          <Drawer.Screen
+            name="Settings"
+            component={SettingsScreen}
+            options={{
+              drawerLabel: "Settings",
+              drawerColor: "#009387",
+              drawerIcon: ({ color }) => (
+                <MaterialCommunityIcons
+                  name="brightness-7"
+                  color={color}
+                  size={26}
+                />
+              ),
+            }}
+          />
+
+          <Drawer.Screen name="Profile" component={ProfileScreen} />
+          <Drawer.Screen name="Booking" component={BookingForm} />
+          <Drawer.Screen name="SignOut" component={SignOut} />
+
+          <Drawer.Screen name="   " component={EditProfileScreen} />
+          <Drawer.Screen name=" " component={Detail} />
+
+          <Drawer.Screen name="  " component={DetailsScreen} />
         </Drawer.Navigator>
       </NavigationContainer>
       {/* <MyTabs /> */}
@@ -187,7 +271,7 @@ const Drawer = createDrawerNavigator();
         name="sample"
         component={sample}
         options={{
-          tabBarLabel: "sample",
+          tabBarLabel: "Home",
           tabBarColor: "black",
           // "#009387"
           tabBarIcon: ({ color }) => (
