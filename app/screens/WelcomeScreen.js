@@ -34,7 +34,7 @@ export default function WelcomeScreen({ navigation }) {
             ></Image> */}
 
             <Text style={styles.welcomeText}>
-              Capture every moment in life with one {" "}
+              Capture every moment in life with one{" "}
               <Text
                 style={{
                   fontSize: 30,

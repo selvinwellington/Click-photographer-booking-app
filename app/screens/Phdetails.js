@@ -92,7 +92,7 @@ const actions = [
     position: 1,
   },
   {
-    text: "Location",
+    text: "Request",
     icon: require("../assets/maploc.png"),
 
     name: "bt_room",

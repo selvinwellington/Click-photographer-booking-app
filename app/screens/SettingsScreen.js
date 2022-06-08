@@ -26,9 +26,9 @@ const SettingsScreen = () => {
 
   const settingsOptions = [
     { title: "My Info", subTitle: "Setup your profile", onPress: () => {} },
-    { title: "Accounts", subTitle: null, onPress: () => {} },
+    { title: "My Booking", subTitle: null, onPress: () => {} },
     {
-      title: "Default account for new contacts",
+      title: "Edit Profile",
       subTitle: email,
       onPress: () => {},
     },
@@ -44,11 +44,12 @@ const SettingsScreen = () => {
         setModalVisible(true);
       },
     },
-    { title: "Name format", subTitle: "First name first", onPress: () => {} },
-    { title: "Import", subTitle: null, onPress: () => {} },
-    { title: "Export", subTitle: null, onPress: () => {} },
-    { title: "Blocked numbers", subTitle: null, onPress: () => {} },
-    { title: "About RNContacts", subTitle: null, onPress: () => {} },
+    // { title: "Name format", subTitle: "First name first", onPress: () => {} },
+    // { title: "Import", subTitle: null, onPress: () => {} },
+    // { title: "Export", subTitle: null, onPress: () => {} },
+    // { title: "Blocked numbers", subTitle: null, onPress: () => {} },
+    { title: "Contact Us", subTitle: null, onPress: () => {} },
+    { title: "Log Out", subTitle: null, onPress: () => {} },
   ];
 
   const prefArr = [

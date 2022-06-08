@@ -23,7 +23,7 @@ const LoginScreen = ({ navigation }) => {
       isValid = false;
     }
     if (isValid) {
-      navigation.navigate("Phdetails");
+      navigation.navigate("Photographer");
       // login();
     }
   };

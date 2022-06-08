@@ -16,6 +16,13 @@ const Map = () => {
         longitudeDelta: 0.0121,
       }}
     >
+      {/* <Marker
+        coordinate={{
+          latitude: 13.0644,
+          longitude: 80.2338,
+        }}
+        image={require("../assets/mylocation.png")}
+      /> */}
       <Marker
         coordinate={{
           latitude: 13.05689,
@@ -46,7 +53,6 @@ const Map = () => {
         }}
         image={require("../assets/map_marker.png")}
       />
-     
     </MapView>
   );
 };

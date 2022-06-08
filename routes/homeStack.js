@@ -20,6 +20,7 @@ import ExploreStack from "./ExploreStack";
 import BookingStack from "./BookingStack";
 import PhotoStack from "./PhotoStack";
 import BookingForm from "../app/screens/BookingForm";
+import payment from "../app/components/payment";
 
 // import sample from "../app/screens/sample";
 
@@ -120,7 +121,7 @@ const screens = {
   //   screen: EditProfileScreen,
   // },
 
-  Phdetails: {
+  Photographer: {
     screen: Phdetails,
   },
 
@@ -134,6 +135,9 @@ const screens = {
   BookingForm:{
     screen:BookingForm,
   },
+  payment: {
+    screen:payment,
+  }
 };
 
 const HomeStack = createStackNavigator(screens);

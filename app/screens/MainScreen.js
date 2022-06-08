@@ -79,6 +79,8 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import Icon from "react-native-vector-icons/Ionicons";
 import ExploreStack from "../../routes/ExploreStack";
 import sample from "./sample";
+import RegistrationScreen from "./RegistrationScreen";
+import payment from "../components/payment";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -246,14 +248,18 @@ const Drawer = createDrawerNavigator();
             }}
           />
 
-          <Drawer.Screen name="Profile" component={ProfileScreen} />
-          <Drawer.Screen name="Booking" component={BookingForm} />
-          <Drawer.Screen name="SignOut" component={SignOut} />
+          <Drawer.Screen name="    " component={ProfileScreen} />
+          <Drawer.Screen name="      " component={SignOut} />
 
           <Drawer.Screen name="   " component={EditProfileScreen} />
           <Drawer.Screen name=" " component={Detail} />
 
-          <Drawer.Screen name="  " component={DetailsScreen} />
+          <Drawer.Screen name="         " component={RegistrationScreen} />
+
+          <Drawer.Screen name="Booking" component={BookingForm} />
+
+          <Drawer.Screen name="DetailsScreen" component={DetailsScreen} />
+          <Drawer.Screen name="payment" component={payment} />
         </Drawer.Navigator>
       </NavigationContainer>
       {/* <MyTabs /> */}

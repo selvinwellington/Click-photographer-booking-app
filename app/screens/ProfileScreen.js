@@ -116,7 +116,7 @@ const ProfileScreen = ({ navigation }) => {
             <Text style={styles.menuItemText}>Your Favorites</Text>
           </View>
         </TouchableRipple>
-        <TouchableRipple onPress={() => {}}>
+        <TouchableRipple onPress={() => {navigation.navigate("payment")}}>
           <View style={styles.menuItem}>
             <Icon name="credit-card" color="#FF6347" size={25} />
             <Text style={styles.menuItemText}>Payment</Text>
