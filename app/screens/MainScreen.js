@@ -127,7 +127,13 @@ const Drawer = createDrawerNavigator();
   return (
     <>
       <NavigationContainer>
-        <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Navigator
+          initialRouteName="Home"
+          screenOptions={{
+            drawerActiveBackgroundColor: "black",
+            drawerActiveTintColor:"white",
+          }}
+        >
           <Drawer.Screen
             name="Home"
             // component={HomeScreen}

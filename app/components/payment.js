@@ -126,4 +126,8 @@ const styles = StyleSheet.create({
 
   //         flexDirection: "row",
   //   }
+  btn:{
+    color:"black",
+    backgroundColor: "#efefefef",
+  }
 });

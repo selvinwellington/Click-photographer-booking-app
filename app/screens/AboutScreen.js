@@ -36,7 +36,7 @@ const AboutScreen = () => {
           </Text>
         </View>
         <View style={styles.Layout2}>
-          <Text style={styles.aboutSubHeader}> Career oppertunies</Text>
+          <Text style={styles.aboutSubHeader}> Career opportunities</Text>
           <Text style={[styles.paraStyle, styles.aboutPara]}>
             With the boom in advertising, media and the fashion industry,
             photography has emerged as a lucrative and thrilling career option
