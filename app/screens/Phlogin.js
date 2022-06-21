@@ -76,7 +76,7 @@ const LoginScreen = ({ navigation }) => {
         </Text>
         <Text
           style={{
-            color: COLORS.grey,
+            color: "white",
             fontSize: 18,
             marginVertical: 10,
             textAlign: "center",
@@ -94,6 +94,7 @@ const LoginScreen = ({ navigation }) => {
             error={errors.email}
           />
           <Input
+          
             onChangeText={(text) => handleOnchange(text, "password")}
             onFocus={() => handleError(null, "password")}
             iconName="lock-outline"

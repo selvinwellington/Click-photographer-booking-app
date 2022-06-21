@@ -24,6 +24,9 @@ import {
   candid2,
 } from "../studiopics/studioimg";
 
+ import {Linking} from 'react-native';
+
+
 const DetailsScreen = ({ navigation, route }) => {
   // const item = {
   //   id: "2",
@@ -33,6 +36,15 @@ const DetailsScreen = ({ navigation, route }) => {
   //   image: require("../assets/studio2.webp"),
   //   details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id leo. Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Justo laoreet sit amet cursus sit`,
   // };
+  dialCall = (number) => {
+    let phoneNumber = "";
+    if (Platform.OS === "android") {
+      phoneNumber = `tel:${number}`;
+    } else {
+      phoneNumber = `telprompt:${number}`;
+    }
+    Linking.openURL(phoneNumber);
+  };
 
   const item = route.params;
   console.log(item);
@@ -63,7 +75,13 @@ const DetailsScreen = ({ navigation, route }) => {
       </ImageBackground>
       <View>
         <View style={style.iconContainer}>
-          <Icon name="place" color={COLORS.white} size={28} />
+          <TouchableOpacity
+            onPress={() => {
+              this.dialCall(9360495121);
+            }}
+          >
+            <Icon name="call" color={COLORS.white} size={28} />
+          </TouchableOpacity>
         </View>
         <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>{item.name}</Text>
