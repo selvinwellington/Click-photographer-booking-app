@@ -8,7 +8,7 @@ Here are some snapshots:
 
 ![image](https://user-images.githubusercontent.com/91906072/185894579-e260a5bd-0f74-49ef-b072-672222b923c8.png)
 
-## My process
+## Stack Used
 
 Built with
  - React Native
