@@ -8,3 +8,19 @@ Here are some snapshots:
 
 ![image](https://user-images.githubusercontent.com/91906072/185894579-e260a5bd-0f74-49ef-b072-672222b923c8.png)
 
+## My process
+
+Built with
+ - React Native
+ - Material UI
+ - Flexbox
+ - CSS Grid
+ - JavaScript
+ - Google Maps API
+ - Firebase(backend)
+
+## Editor:
+
+Editor used : VS code editor
+              Android Studio
+
