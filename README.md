@@ -21,6 +21,5 @@ Built with
 
 ## Editor:
 
-Editor used : VS code editor
-              Android Studio
+Editor used : VS Code , Android Studio
 
