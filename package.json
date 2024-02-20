@@ -25,7 +25,7 @@
     "galio-framework": "^0.8.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-native": "^0.68.2",
+    "react-native": "^0.69.12",
     "react-native-clean-form": "^0.5.0",
     "react-native-floating-action": "^1.22.0",
     "react-native-gesture-handler": "~2.2.1",
